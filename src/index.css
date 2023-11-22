@@ -690,7 +690,7 @@ header {
     color: var(--text-color-low-opacity);
 }
 
-.db-container a {
+.db-container p {
     background-color: transparent;
     text-decoration: none;
     color: var(--text-color-low-opacity);
@@ -702,7 +702,7 @@ header {
 }
 
 
-.db-container a:last-child {
+.db-container p:last-child {
     color: var(--main-color);
 }
 
@@ -776,6 +776,7 @@ header {
 }
 
 
+
 /* CUSTOM SCROLL */
 
 ::-webkit-scrollbar {
@@ -794,7 +795,7 @@ header {
 }
 
 /* SELECTION COLOR  */
-::-moz-selection {
+/* ::-moz-selection {
     color: #000;
     background: #c7ffbd;
 }
@@ -802,4 +803,4 @@ header {
 ::selection {
     color: #000;
     background: #87beeb8c;
-}
+} */

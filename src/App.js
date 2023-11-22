@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 
 function App() {

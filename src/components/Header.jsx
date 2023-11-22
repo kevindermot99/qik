@@ -30,7 +30,7 @@ function Header() {
         // dark
         else if (SystemThemeUser && SystemThemeUser === "dark") {
             document.querySelector("body").classList.add("dark");
-            // setTheme(!theme);
+            // setTheme(true);
         }
     }, []);
 
