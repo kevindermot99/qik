@@ -2,6 +2,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import React, { useState, useEffect } from 'react';
 import { CgMenuLeft } from "react-icons/cg";
 import { FaInfo } from "react-icons/fa";
+import Headroom from "react-headroom";
 
 function Header() {
 
@@ -130,18 +131,21 @@ function Header() {
 
 
             </div>
-            <header>
-                <div className="logo">
-                    <button onClick={showNav}><CgMenuLeft className="react-icon" /></button>
-                    <h1>QiK</h1>
+            {/* <Headroom > */}
+                <header>
+                    <div className="logo">
+                        <button onClick={showNav}><CgMenuLeft className="react-icon" /></button>
+                        <h1>QiK</h1>
 
-                </div>
-                <div className="right-icons">
-                    <div className={`ri-btn ${darkmode}`} onClick={ActiveMode}>{theme ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-moon-stars-fill"></i>}</div>
-                    <div className={`ri-btn`} ><FaInfo className="react-icon" /></div>
-                </div>
+                    </div>
+                    <div className="right-icons">
+                        <div className={`ri-btn ${darkmode}`} onClick={ActiveMode}>{theme ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-moon-stars-fill"></i>}</div>
+                        <div className={`ri-btn`} ><FaInfo className="react-icon" /></div>
+                    </div>
 
-            </header>
+                </header>
+            {/* </Headroom> */}
+            
         </>
 
     )

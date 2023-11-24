@@ -83,6 +83,7 @@ header {
     align-items: center;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
+    z-index: 10;
 }
 
 .logo {
@@ -384,7 +385,7 @@ header {
     flex-direction: column;
     padding: 30px;
     position: relative;
-    z-index: 8;
+    /* z-index: 8; */
 }
 
 .hero h1 {
@@ -462,6 +463,7 @@ header {
     font-weight: bold;
     font-size: 23px;
     text-transform: capitalize;
+    padding-top: 20px;
 }
 
 .usagetitle i{
@@ -790,6 +792,9 @@ header {
         position: sticky;
         top: 0;
         z-index: 10;
+    }
+    .usagetitle h2{
+        padding-top: 75px;
     }
 
 }
