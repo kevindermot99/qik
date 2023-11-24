@@ -4,6 +4,7 @@ import { FaCode } from "react-icons/fa6";
 import { useState, useEffect, useRef } from "react";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { LuMousePointerClick } from "react-icons/lu";
 
 function Home() {
    const usage = useRef(null)
@@ -46,36 +47,42 @@ function Home() {
          </div>
 
          <div ref={usage} className="usage">
-            <span>
-               <div>
-                  <h1>1: Explore Collections</h1>
-                  <p>Discover a variety of elements by browsing through our collections.</p>
-               </div>
-               <div className="example-loader">
-                  <div class="loader-1"></div>
-                  <div class="loader-2"></div>
-                  <div class="loader-3"></div>
-                  <div class="loader-4"></div>
-               </div>
-            </span>
-            <span>
-               <div>
-                  <h1>2: Choose and Reveal</h1>
-                  <p>Pick your desired item, click on the source, and unveil the code.</p>
-               </div>
-               <div className="exmple-source-btn">
-                  <button><FaCode className="react-icon" />Source</button>
-               </div>
-            </span>
-            <span>
-               <div>
-                  <h1>3: Integrate Easily</h1>
-                  <p>Copy the code provided—seamless integration into your project begins!</p>
-               </div>
-               <div className="exmple-source-btn">
-                  <button><TbCopy className="react-icon" />Copy</button>
-               </div>
-            </span>
+            <div className="usagetitle">
+               <h2><i className="bi bi-hash"></i>Usage</h2>
+            </div>
+            <div className="steps">
+               <span>
+                  <div>
+                     <h1>1: Explore Collections</h1>
+                     <p>Discover a variety of elements by browsing through our collections.</p>
+                  </div>
+                  <div className="example-loader">
+                     <div class="loader-1"></div>
+                     <div class="loader-2"></div>
+                     <div class="loader-3"></div>
+                     <div class="loader-4"></div>
+                  </div>
+               </span>
+               <span>
+                  <div>
+                     <h1>2: Choose and Reveal</h1>
+                     <p>Pick your desired item, click on the source, and unveil the code.</p>
+                  </div>
+                  <div className="exmple-source-btn">
+                     <button><LuMousePointerClick className="react-icon" />Click to Reveal</button>
+                  </div>
+               </span>
+               <span>
+                  <div>
+                     <h1>3: Integrate Easily</h1>
+                     <p>Copy the code provided—seamless integration into your project begins!</p>
+                  </div>
+                  <div className="exmple-source-btn">
+                     <button><TbCopy className="react-icon" />Copy</button>
+                  </div>
+               </span>
+            </div>
+
          </div>
 
          <div className="grid-container">
@@ -107,7 +114,7 @@ function Home() {
             </div>
          </div>
 
-            {/* <SyntaxHighlighter
+         {/* <SyntaxHighlighter
                language="javascript"
                style={atomOneDark}
                customStyle={{

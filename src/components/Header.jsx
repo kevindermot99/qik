@@ -84,7 +84,7 @@ function Header() {
                         <i class="bi bi-x-lg" onClick={hideNav}></i>
                     </div>
                     <p>Introduction</p>
-                    <span><i class="bi bi-hash"></i>Hello</span>
+                    <span><i class="bi bi-hash"></i>Usage</span>
 
                     <p><i class="bi bi-archive"></i>Navigation</p>
                         <span><i class="bi bi-hash"></i>Menu</span>

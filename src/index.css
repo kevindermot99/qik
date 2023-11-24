@@ -444,20 +444,51 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 10px;
-    padding: 20px;
-    max-width: 1100px;
+    padding: 0px 30px;
+    max-width: 1300px;
     /* background-color: cadetblue; */
     margin: auto;
 }
 
+.usagetitle{
+    width: 100%;
+    text-align: left;
+}
+
+.usagetitle h2{
+    color: var(--text-color-low-opacity);
+    font-weight: bold;
+    font-size: 23px;
+    text-transform: capitalize;
+}
+
+.usagetitle i{
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.usage .steps{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    gap: 0px;
+    /* flex-wrap: wrap; */
+    /* background-color: cadetblue; */
+}
+
 .usage span {
     /* background-color: green; */
-    width: 400px;
+    width: 100%;
+    max-width: 420px;
     height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0px 20px;
 }
 
 .usage h1 {
@@ -467,7 +498,8 @@ header {
 
 .usage p {
     color: var(--text-color-low-opacity);
-    font-size: 16px;
+    font-size: 15px;
+    word-break: break-all;
 }
 
 /* example loader */
@@ -590,10 +622,8 @@ header {
     position: relative;
     margin-top: 10px;
     border-radius: 10px;
-    /* border: 1px solid var(--border-lines); */
-    /* background-color: var(--item-bg-color); */
     transition: .2s;
-    /* background-color: cadetblue; */
+    pointer-events: none;
 }
 
 .exmple-source-btn button {
@@ -604,7 +634,7 @@ header {
     padding: 10px 15px;
     height: 45px;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 14px;
     transition: .2s;
     cursor: not-allowed;
     display: flex;
@@ -626,8 +656,8 @@ header {
     /* background-color: cadetblue; */
     width: 100%;
     height: fit-content;
-    padding: 20px;
-    max-width: 1100px;
+    padding: 10px 30px;
+    max-width: 1300px;
     margin: auto;
 }
 
@@ -726,12 +756,14 @@ header {
 }
 
 @media screen and (max-width: 700px) {
-    .usage {
+    .usage .steps {
         flex-direction: column;
     }
 
     .usage span {
         width: 100%;
+        padding: unset;
+        max-width: unset;
     }
 }
 
