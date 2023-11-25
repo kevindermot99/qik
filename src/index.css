@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&family=Poppins:wght@300&display=swap');
 
 * {
-    font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -22,33 +21,38 @@ body {
     --border-lines: #99999942;
     --scroll-thumb: #cfcfcf;
     --shadow-color: #7f7d9228;
-    --hero-section-bg: #fff5e5;
     --item-bg-color: #e6e6e6;
     --item-hover-color: #d4d4d467;
     --menu-color: #fcfcfc;
+    --text-editor-color: #3a3a42;
+    --copy-button-bg: #4d4d538e;
+    --copy-icon-color: #eee;
 }
 
 body.dark {
     /* Dark Colors */
     /* --body-color: #1f2a31e1; */
     --body-color: #0a1820e1;
+    /* --body-color: #28363f; */
     --text-color: #eee;
     --text-color-low-opacity: #c7c7c7;
     --border-lines: #7a779252;
     --scroll-thumb: #6d6d6d81;
     --shadow-color: #38383859;
-    --hero-section-bg: #ffd697;
     --item-bg-color: #1715276b;
     --item-hover-color: #545e649a;
     --menu-color: #3d4147;
+    --text-editor-color: #1715276b;
+    --copy-button-bg: #323341;
 }
 
 .container {
-    min-height: 400vh;
+    height: fit-content;
     background-color: var(--body-color);
     z-index: 999;
     padding: 0px;
     transition: .3s;
+    font-family: 'Poppins', sans-serif;
 }
 
 body#with-navbar .container {
@@ -643,6 +647,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .exmple-source-btn button:hover {
@@ -738,6 +743,139 @@ header {
     color: var(--main-color);
 }
 
+.example-container{
+    padding-bottom: 60px;
+}
+
+.example-container h1{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.example{
+    display: flex;
+    /* background-color: cadetblue; */
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.example .e1{
+    background-color: var(--item-bg-color);
+    width: 100%;
+    max-width: 50%;
+    height: 300px;
+    border-radius: 10px;
+    /* border: 1px solid var(--border-lines); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.example .e2{
+    width: 100%;
+    max-width:50%;
+    /* background-color: chocolate; */
+    height: 300px;
+    border-radius: 10px;
+    /* border: 1px solid var(--border-lines); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.example .e2 div{
+    width: 100%;
+    min-height: 43px;
+    background-color: var(--text-editor-color);
+    border-radius: 10px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    transition: .2s;
+}
+
+.exampleLoaderCss{
+    overscroll-behavior: contain;
+    padding: 10px;
+}
+
+.exampleLoaderCss::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.exampleLoaderCss::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+
+.example .e2 div:nth-child(2){
+    height: 100%;
+}
+
+.copy-button{
+    position: absolute;
+    position: -webkit-sticky;
+    top: 6px;
+    right: 6px;
+    height: fit-content;
+    border: none;
+    outline: none;
+    background-color: var(--copy-button-bg);
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
+}
+
+.copy-button:hover{
+    opacity: 1;
+}
+
+.copy-button:hover .copy-icon{
+    opacity: .6;
+}
+
+.copy-icon{
+    color: var(--copy-icon-color);
+    font-size: 20px;
+    opacity: .3;
+}
+
+.example .e2 div:hover .copy-button{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* MEDIA QUUERIES */
@@ -766,6 +904,7 @@ header {
         width: 100%;
         padding: unset;
         max-width: unset;
+        padding-bottom: 10px;
     }
 }
 
@@ -797,6 +936,18 @@ header {
         padding-top: 75px;
     }
 
+    .example{
+        flex-direction: column;
+    }
+
+    .example .e1, .example .e2{
+        max-width: unset;
+    }
+
+    .example .e1{
+        height: 100px;
+    }
+
 }
 
 @media screen and (max-width: 330px) {
@@ -817,10 +968,14 @@ header {
 /* CUSTOM SCROLL */
 
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body.dark::-webkit-scrollbar-track {
     background-color: var(--body-color);
 }
 

@@ -88,12 +88,12 @@ function Header() {
                     <span><i class="bi bi-hash"></i>Usage</span>
 
                     <p><i class="bi bi-archive"></i>Navigation</p>
+                        <span><i className="bi bi-hash"></i>Breadcrumbs</span>
                         <span><i class="bi bi-hash"></i>Menu</span>
                         <span><i class="bi bi-hash"></i>Mega-menu</span>
                         <span><i class="bi bi-hash"></i>Sidebar Menu</span>                    
 
                     <p><i class="bi bi-archive"></i>UI/UX</p>
-                        <span><i className="bi bi-hash"></i>Breadcrumbs</span>
                         <span><i className="bi bi-hash"></i>Button</span>
                         <span><i className="bi bi-hash"></i>Card</span>
                         <span><i className="bi bi-hash"></i>checkbox</span>
@@ -128,7 +128,6 @@ function Header() {
             <div className={`nav-overlay ${navActive}`} onClick={hideNav}></div>
             <div id="nav-middle-toggle" className={scrollClassName + navActive}>
                 {nav ? <i class="bi bi-chevron-compact-left" onClick={hideNav}></i> : <i class="bi bi-chevron-compact-right" onClick={showNav}></i>}
-
 
             </div>
             {/* <Headroom > */}
