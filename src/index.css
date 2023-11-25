@@ -27,6 +27,7 @@ body {
     --text-editor-color: #3a3a42;
     --copy-button-bg: #4d4d538e;
     --copy-icon-color: #eee;
+    --wave-color: #eee;
 }
 
 body.dark {
@@ -378,6 +379,12 @@ header {
     color: var(--text-color);
 } */
 
+.home-container{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
 .hero {
     min-height: 80vh;
     height: fit-content;
@@ -390,6 +397,7 @@ header {
     padding: 30px;
     position: relative;
     /* z-index: 8; */
+    margin-bottom: 100px;
 }
 
 .hero h1 {
@@ -442,18 +450,18 @@ header {
     padding-top: 2px;
 }
 
+
 .usage {
     width: 100%;
-    min-height: 70vh;
+    /* min-height: 50vh; */
     height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    padding: 0px 30px;
+    padding: 10px 30px;
     max-width: 1300px;
-    /* background-color: cadetblue; */
     margin: auto;
 }
 
@@ -467,7 +475,7 @@ header {
     font-weight: bold;
     font-size: 23px;
     text-transform: capitalize;
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 
 .usagetitle i{
@@ -946,6 +954,11 @@ header {
 
     .example .e1{
         height: 100px;
+    }
+
+    .copy-button{
+        opacity: 1;
+        visibility: visible;
     }
 
 }

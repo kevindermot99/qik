@@ -62,9 +62,9 @@ function Home() {
       try {
          await navigator.clipboard.writeText(exampleLoaderCss);
          setexampleCss(true)
-      setTimeout(() => {
-         setexampleCss(false)
-      }, 1500);
+         setTimeout(() => {
+            setexampleCss(false)
+         }, 1500);
       } catch (err) {
          console.error(
             "Unable to copy to clipboard.",
@@ -76,7 +76,7 @@ function Home() {
 
 
    return (
-      <div>
+      <div className="home-container">
 
          <div className="hero">
             <h1><span>Q</span>uick <span>i</span>nspiration <span>K</span>it</h1>
@@ -87,6 +87,7 @@ function Home() {
          </div>
 
          <div ref={usage} className="usage">
+            
             <div className="usagetitle">
                <h2><i className="bi bi-hash"></i>Usage</h2>
             </div>
