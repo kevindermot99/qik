@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import '../styles/codeheader.css';
 
 const CodeHeader = ({languages}) => {
@@ -8,6 +9,10 @@ const CodeHeader = ({languages}) => {
       ))}
     </div>
   )
+}
+
+CodeHeader.propTypes = {
+  languages: propTypes.array.isRequired
 }
 
 export default CodeHeader

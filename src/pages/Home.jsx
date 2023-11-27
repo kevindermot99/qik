@@ -8,9 +8,13 @@ import { LuMousePointerClick } from "react-icons/lu";
 import { IoCheckmark } from "react-icons/io5";
 import CodeHeader from "../components/codeheader";
 import CodeBody from "../components/codebody";
+import codeContext from "../contexts/codecontext";
 
 function Home() {
    const usage = useRef(null)
+   const {codeSettings, setCodeSettings} = useState({
+      defaultLangIndex: 0,
+   });
 
    const executeScroll = () => usage.current.scrollIntoView()
    const [exampleHtml, setexampleHtml] = useState(false);
@@ -131,8 +135,10 @@ function Home() {
          <div className="code-container example-container">
             <h1>Example</h1>
             <div className="codeholder">
-               <CodeHeader languages={['html', 'css']}/>
-               <CodeBody />
+               <codeContext.Provider value={{codeSettings, setCodeSettings}}>
+                  <CodeHeader languages={['html', 'css']}/>
+                  <CodeBody />
+               </codeContext.Provider>
             </div>
          </div>
 
