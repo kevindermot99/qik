@@ -1,7 +1,11 @@
+import { useContext } from 'react';
+import codeContext from '../contexts/codecontext';
 import propTypes from 'prop-types'
 import '../styles/codeheader.css';
 
 const CodeHeader = ({languages}) => {
+  const { codeSettings } = useContext(codeContext)
+
   return (
     <div className="codeHeader">
       {languages.map((lang, index) => (

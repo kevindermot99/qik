@@ -12,8 +12,9 @@ import codeContext from "../contexts/codecontext";
 
 function Home() {
    const usage = useRef(null)
-   const {codeSettings, setCodeSettings} = useState({
-      defaultLangIndex: 0,
+   const [codeSettings, setCodeSettings] = useState({
+      defaultLangName: '',
+      defaultLangIndex: 0
    });
 
    const executeScroll = () => usage.current.scrollIntoView()
