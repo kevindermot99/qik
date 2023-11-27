@@ -7,6 +7,7 @@ import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { LuMousePointerClick } from "react-icons/lu";
 import { IoCheckmark } from "react-icons/io5";
 import CodeHeader from "../components/codeheader";
+import CodeBody from "../components/codebody";
 
 function Home() {
    const usage = useRef(null)
@@ -129,8 +130,9 @@ function Home() {
 
          <div className="code-container example-container">
             <h1>Example</h1>
-            <div className="griditem">
+            <div className="codeholder">
                <CodeHeader languages={['html', 'css']}/>
+               <CodeBody />
             </div>
          </div>
 

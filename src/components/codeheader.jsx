@@ -1,12 +1,11 @@
 import '../styles/codeheader.css';
 
 const CodeHeader = ({languages}) => {
-  
   return (
-    <div className="codeHeaderHolder">
-      {languages.forEach((lang) => {
-        <button type="button">{lang}</button>
-      })}
+    <div className="codeHeader">
+      {languages.map((lang, index) => (
+        <button type="button" key={index}>{lang}</button>
+      ))}
     </div>
   )
 }
