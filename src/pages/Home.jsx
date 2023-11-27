@@ -6,6 +6,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { LuMousePointerClick } from "react-icons/lu";
 import { IoCheckmark } from "react-icons/io5";
+import CodeHeader from "../components/codeheader";
 
 function Home() {
    const usage = useRef(null)
@@ -126,50 +127,10 @@ function Home() {
 
          </div>
 
-         <div className="grid-container example-container">
+         <div className="code-container example-container">
             <h1>Example</h1>
-            <div className="example">
-               <div className="e1">
-                  <div class="loader-1"></div>
-               </div>
-               <div className="e2">
-                  <div>
-                     <SyntaxHighlighter
-                        language="html"
-                        style={monokaiSublime}
-                        customStyle={{
-                           fontFamily: "consolas",
-                           width: "100%",
-                           fontSize: "14px",
-                           backgroundColor: "transparent"
-                        }}
-                     >
-                        {exampleLoaderHtml}
-                     </SyntaxHighlighter>
-
-                     <button className="copy-button" onClick={copyExampleHtml}>{exampleHtml ? <IoCheckmark className="copy-icon" /> : <TbCopy className="copy-icon" />}</button>
-                  </div>
-                  <div>
-                     <SyntaxHighlighter
-                        language="css"
-                        style={monokaiSublime}
-                        customStyle={{
-                           fontFamily: "consolas",
-                           width: "100%",
-                           fontSize: "14px",
-                           backgroundColor: "transparent",
-                           maxHeight: "300px",
-                           overflowY: "scroll",
-                           paddingBottom: "100px"
-                        }}
-                        className="exampleLoaderCss"
-                     >
-                        {exampleLoaderCss}
-                     </SyntaxHighlighter>
-
-                     <button className="copy-button" onClick={copyExampleCss}>{exampleCss ? <IoCheckmark className="copy-icon" /> : <TbCopy className="copy-icon" />}</button>
-                  </div>
-               </div>
+            <div className="griditem">
+               <CodeHeader languages={['html', 'css']}/>
             </div>
          </div>
 
