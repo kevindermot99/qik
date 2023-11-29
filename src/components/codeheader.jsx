@@ -5,7 +5,6 @@ import '../styles/codeheader.css';
 
 const CodeHeader = ({languages}) => {
   const { codeSettings, setCodeSettings } = useContext(codeContext)
-  console.log(codeSettings)
 
   return (
     <div className="codeHeader">
@@ -15,8 +14,8 @@ const CodeHeader = ({languages}) => {
           key={index}
           onClick={() => {
             setCodeSettings({
-              defaultLangName: lang,
-              defaultLangIndex: index             
+              langName: lang,
+              langIndex: index
             })}}
         >{lang}</button>
       ))}

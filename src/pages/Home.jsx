@@ -5,7 +5,6 @@ import { useState, useEffect, useRef } from "react";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { LuMousePointerClick } from "react-icons/lu";
-import { IoCheckmark } from "react-icons/io5";
 import CodeHeader from "../components/codeheader";
 import CodeBody from "../components/codebody";
 import codeContext from "../contexts/codecontext";
@@ -13,73 +12,11 @@ import codeContext from "../contexts/codecontext";
 function Home() {
    const usage = useRef(null)
    const [codeSettings, setCodeSettings] = useState({
-      defaultLangName: '',
-      defaultLangIndex: 0
+      langName: 'html',
+      langIndex: 0,
    });
 
    const executeScroll = () => usage.current.scrollIntoView()
-   const [exampleHtml, setexampleHtml] = useState(false);
-   const [exampleCss, setexampleCss] = useState(false);
-
-
-   const exampleLoaderHtml = `<div class="loader"></div>`;
-   const exampleLoaderCss =
-      `.loader {
-   width: 35px;
-   height: 35px;
-   border: 3px solid #64b6e5;
-   border-bottom-color: #c7c7c7;
-   border-left-color: #c7c7c7;
-   border-radius: 50%;
-   display: inline-block;
-   box-sizing: border-box;
-   animation: rotation 1s linear infinite;
-}
-
-
-@keyframes rotation {
-   0% {
-       transform: rotate(0deg);
-   }
-
-   100% {
-       transform: rotate(360deg);
-   }
-}
-`;
-
-   const copyExampleHtml = async () => {
-
-      try {
-         await navigator.clipboard.writeText(exampleLoaderHtml);
-         setexampleHtml(true)
-         setTimeout(() => {
-            setexampleHtml(false)
-         }, 1500);
-      } catch (err) {
-         console.error(
-            "Unable to copy to clipboard.",
-            err
-         );
-         alert("Copy to clipboard failed.");
-      }
-   }
-
-   const copyExampleCss = async () => {
-      try {
-         await navigator.clipboard.writeText(exampleLoaderCss);
-         setexampleCss(true)
-         setTimeout(() => {
-            setexampleCss(false)
-         }, 1500);
-      } catch (err) {
-         console.error(
-            "Unable to copy to clipboard.",
-            err
-         );
-         alert("Copy to clipboard failed.");
-      }
-   }
 
 
    return (
@@ -135,9 +72,9 @@ function Home() {
 
          <div className="code-container example-container">
             <h1>Example</h1>
-            <div className="codeholder">
+            <div className="codeholder" style={{paddingLeft: '100px'}}>
                <codeContext.Provider value={{codeSettings, setCodeSettings}}>
-                  <CodeHeader languages={['html', 'css']}/>
+                  <CodeHeader languages={['html', 'css', 'javascript']}/>
                   <CodeBody />
                </codeContext.Provider>
             </div>
