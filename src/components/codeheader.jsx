@@ -17,6 +17,7 @@ const CodeHeader = ({languages}) => {
               langName: lang,
               langIndex: index
             })}}
+          className={codeSettings.langName === lang ? 'activeCodeHeader' : ''}
         >{lang}</button>
       ))}
     </div>

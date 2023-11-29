@@ -5,7 +5,7 @@ import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlig
 import { TbCopy } from "react-icons/tb";
 import { IoCheckmark } from "react-icons/io5";
 import { monokaiSublime } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import '../index.css'
+// import '../index.css'
 import '../styles/codeheader.css'
 
 const CodeBody = () => {
@@ -13,7 +13,6 @@ const CodeBody = () => {
   const { langName, langIndex } = codeSettings;
   const [copied, setCopied] = useState(false);
   const currentCode = codeBase.homeExample.code[langName];
-//   const currentCodeIdentifier = Object.keys(codeSamples).filter((code) => code === langName)
 
   const copyCode = async (code) => {
      try {
@@ -33,8 +32,8 @@ const CodeBody = () => {
 
   return (
     <div className="codeBody">
-      <div className="example">
-         <div className="e2">
+      <div className="">
+         <div className="">
             <div>
                <SyntaxHighlighter
                   language={langName}
@@ -48,7 +47,7 @@ const CodeBody = () => {
                      overflowY: "scroll",
                      paddingBottom: "100px"
                   }}
-                  className="exampleLoaderCss"
+                  className=""
                >
                   {currentCode}
                </SyntaxHighlighter>

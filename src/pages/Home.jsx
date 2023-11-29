@@ -8,6 +8,7 @@ import { LuMousePointerClick } from "react-icons/lu";
 import CodeHeader from "../components/codeheader";
 import CodeBody from "../components/codebody";
 import codeContext from "../contexts/codecontext";
+import '../styles/codeheader.css'
 
 function Home() {
    const usage = useRef(null)
@@ -72,11 +73,17 @@ function Home() {
 
          <div className="code-container example-container">
             <h1>Example</h1>
-            <div className="codeholder" style={{paddingLeft: '100px'}}>
-               <codeContext.Provider value={{codeSettings, setCodeSettings}}>
-                  <CodeHeader languages={['html', 'css', 'javascript']}/>
-                  <CodeBody />
-               </codeContext.Provider>
+            <div className="example">
+               <div className="e1">
+                  <div class="loader-1"></div>
+               </div>
+
+               <div className="codeholder">
+                   <codeContext.Provider value={{codeSettings, setCodeSettings}}>
+                     <CodeHeader languages={['html', 'css', 'javascript']}/>
+                     <CodeBody />
+                  </codeContext.Provider>
+               </div>
             </div>
          </div>
 

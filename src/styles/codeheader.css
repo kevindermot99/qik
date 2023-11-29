@@ -1,0 +1,34 @@
+body {
+  --text-editor-color: #1715276b;
+}
+
+.codeholder {
+  background-color: var(--text-editor-color);
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  padding: 0.2rem;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.codeHeader {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.codeHeader button {
+  background-color: lightgray;
+  padding: .5rem;
+  border: 0px;
+  margin-right: .15rem;
+  font-size: .8rem;
+}
+
+.codeHeader button.activeCodeHeader {
+  background-color: rgb(117, 117, 117);
+}
+
+.codeHeader button:last-child {
+  border-top-right-radius: 15px;
+}
