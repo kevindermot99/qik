@@ -1,7 +1,7 @@
 import { useContext } from 'react';
-import codeContext from '../contexts/codecontext';
+import codeContext from '../../contexts/codecontext';
 import propTypes from 'prop-types'
-import '../styles/codeheader.css';
+import '../../styles/codeblock.css';
 
 const CodeHeader = ({languages}) => {
   const { codeSettings, setCodeSettings } = useContext(codeContext)

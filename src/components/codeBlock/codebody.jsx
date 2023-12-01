@@ -1,12 +1,12 @@
 import { useState, useContext } from "react"
-import codeContext from "../contexts/codecontext"
-import codeBase from "../data/code.json"
+import codeContext from "../../contexts/codecontext"
+import codeBase from "../../data/code.json"
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import { TbCopy } from "react-icons/tb";
 import { IoCheckmark } from "react-icons/io5";
 import { monokaiSublime } from "react-syntax-highlighter/dist/esm/styles/hljs";
 // import '../index.css'
-import '../styles/codeheader.css'
+import '../../styles/codeblock.css'
 
 const CodeBody = () => {
   const { codeSettings } = useContext(codeContext);

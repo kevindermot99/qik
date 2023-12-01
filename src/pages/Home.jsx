@@ -1,23 +1,16 @@
-
 import { TbCopy } from "react-icons/tb";
 // import { FaCode } from "react-icons/fa6";
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 // import SyntaxHighlighter from 'react-syntax-highlighter';
 // import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { LuMousePointerClick } from "react-icons/lu";
-import codeContext from "../contexts/codecontext";
 import CodeBlock from "../components/codeBlock/codeblock";
 import '../styles/codeblock.css'
 
 function Home() {
    const usage = useRef(null)
-   const [codeSettings, setCodeSettings] = useState({
-      langName: 'html',
-      langIndex: 0,
-   });
 
    const executeScroll = () => usage.current.scrollIntoView()
-
 
    return (
       <div className="home-container">
@@ -77,10 +70,8 @@ function Home() {
                   <div class="loader-1"></div>
                </div>
 
-               <div className="codeholder">
-                   <codeContext.Provider value={{codeSettings, setCodeSettings}}>
-                     <CodeBlock languages={['html', 'css', 'javascript']}/>
-                  </codeContext.Provider>
+               <div className="codeSection">
+                  <CodeBlock languages={['html', 'css', 'javascript']}/>
                </div>
             </div>
          </div>
