@@ -1,6 +1,6 @@
 import { useState, useContext } from "react"
 import codeContext from "../../contexts/codecontext"
-import codeBase from "../../data/code.json"
+import codeStorage from "../../data/codeStorage"
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import { TbCopy } from "react-icons/tb";
 import { IoCheckmark } from "react-icons/io5";
@@ -11,7 +11,8 @@ const CodeBody = () => {
   const { codeSettings } = useContext(codeContext);
   const { langName, langIndex } = codeSettings;
   const [copied, setCopied] = useState(false);
-  const currentCode = codeBase.homeExample.code[langName];
+  console.log(codeStorage)
+  const currentCode = codeStorage.homeExample.code[langName];
 
   const copyCode = async (code) => {
      try {
