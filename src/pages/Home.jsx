@@ -1,14 +1,13 @@
 
 import { TbCopy } from "react-icons/tb";
-import { FaCode } from "react-icons/fa6";
+// import { FaCode } from "react-icons/fa6";
 import { useState, useEffect, useRef } from "react";
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+// import SyntaxHighlighter from 'react-syntax-highlighter';
+// import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { LuMousePointerClick } from "react-icons/lu";
-import CodeHeader from "../components/codeheader";
-import CodeBody from "../components/codebody";
 import codeContext from "../contexts/codecontext";
-import '../styles/codeheader.css'
+import CodeBlock from "../components/codeBlock/codeblock";
+import '../styles/codeblock.css'
 
 function Home() {
    const usage = useRef(null)
@@ -80,8 +79,7 @@ function Home() {
 
                <div className="codeholder">
                    <codeContext.Provider value={{codeSettings, setCodeSettings}}>
-                     <CodeHeader languages={['html', 'css', 'javascript']}/>
-                     <CodeBody />
+                     <CodeBlock languages={['html', 'css', 'javascript']}/>
                   </codeContext.Provider>
                </div>
             </div>
