@@ -5,7 +5,6 @@ import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlig
 import { TbCopy } from "react-icons/tb";
 import { IoCheckmark } from "react-icons/io5";
 import { monokaiSublime } from "react-syntax-highlighter/dist/esm/styles/hljs";
-// import '../index.css'
 import '../../styles/codeblock.css'
 
 const CodeBody = () => {
@@ -52,7 +51,7 @@ const CodeBody = () => {
                   {currentCode}
                </SyntaxHighlighter>
 
-               <button className="copy-button" onClick={() => {copyCode(currentCode)}}>
+               <button className="codeCopy" onClick={() => {copyCode(currentCode)}}>
                   {copied ? <IoCheckmark className="copy-icon" /> : <TbCopy className="copy-icon" />}
                </button>
             </div>
