@@ -1,10 +1,15 @@
-import Header from "./components/Header";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import codeContext from "./contexts/codecontext";
+import Header from "./components/Header";
 import Home from './pages/Home'
-import React, { useEffect } from 'react';
 
 
 function App() {
+  const [codeSettings, setCodeSettings] = useState({
+    langName: 'html',
+    langIndex: 0,
+ });
 
   // checking local storage
   useEffect(() => {
@@ -39,10 +44,12 @@ function App() {
 
       <Router>
         <div className='container'>
-          <Header />
-          <Routes>
-            <Route path='/' element={<Home />} />
-          </Routes>
+          <codeContext.Provider value={{codeSettings, setCodeSettings}}>
+            <Header />
+            <Routes>
+              <Route path='/' element={<Home />} />
+            </Routes>
+          </codeContext.Provider>
         </div>
       </Router>
 

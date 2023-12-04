@@ -787,23 +787,22 @@ header {
 
 .example .e2{
     width: 100%;
-    max-width:50%;
-    /* background-color: chocolate; */
-    height: 300px;
     border-radius: 10px;
     /* border: 1px solid var(--border-lines); */
+    background-color: var(--text-editor-color);
+    height: 300px;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    /* align-items: center; */
     gap: 15px;
     flex-direction: column;
     box-sizing: border-box;
 }
 
-.example .e2 div{
+.example .e2 .editor{
     width: 100%;
     min-height: 43px;
-    background-color: var(--text-editor-color);
+   
     border-radius: 10px;
     padding: 6px 10px;
     box-sizing: border-box;
@@ -824,11 +823,6 @@ header {
 
 .exampleLoaderCss::-webkit-scrollbar-thumb {
     background: transparent;
-}
-
-
-.example .e2 div:nth-child(2){
-    height: 100%;
 }
 
 .copy-button{
