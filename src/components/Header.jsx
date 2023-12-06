@@ -1,8 +1,12 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import { CgMenuLeft } from "react-icons/cg";
 import { FaInfo } from "react-icons/fa";
 import Headroom from "react-headroom";
+import logo from "../images/logo.png"
+import { IoIosArrowDown } from "react-icons/io";
+
 
 function Header() {
 
@@ -51,8 +55,8 @@ function Header() {
     let navActive = nav ? 'active' : '';
     useEffect(() => {
         document.body.id = nav ? 'with-navbar' : '';
-      }, [nav]);
-    
+    }, [nav]);
+
 
     const [scrollClassName, setScrollClassName] = useState('hide');
 
@@ -88,37 +92,37 @@ function Header() {
                     <span><i class="bi bi-hash"></i>Usage</span>
 
                     <p><i class="bi bi-archive"></i>Navigation</p>
-                        <span><i className="bi bi-hash"></i>Breadcrumbs</span>
-                        <span><i class="bi bi-hash"></i>Menu</span>
-                        <span><i class="bi bi-hash"></i>Mega-menu</span>
-                        <span><i class="bi bi-hash"></i>Sidebar Menu</span>                    
+                    <span><i className="bi bi-hash"></i>Breadcrumbs</span>
+                    <span><i class="bi bi-hash"></i>Menu</span>
+                    <span><i class="bi bi-hash"></i>Mega-menu</span>
+                    <span><i class="bi bi-hash"></i>Sidebar Menu</span>
 
                     <p><i class="bi bi-archive"></i>UI/UX</p>
-                        <span><i className="bi bi-hash"></i>Button</span>
-                        <span><i className="bi bi-hash"></i>Card</span>
-                        <span><i className="bi bi-hash"></i>checkbox</span>
-                        <span><i className="bi bi-hash"></i>Colors</span>
-                        <span><i className="bi bi-hash"></i>Footers</span>
-                        <span><i className="bi bi-hash"></i>Gallery</span>
-                        <span><i className="bi bi-hash"></i>input</span>
-                        <span><i className="bi bi-hash"></i>Loading Spinners</span>
-                        <span><i className="bi bi-hash"></i>radio</span>
-                        <span><i className="bi bi-hash"></i>Scrollbar</span>
-                        <span><i className="bi bi-hash"></i>Shadows</span>
-                        <span><i className="bi bi-hash"></i>Tables</span>
-                        <span><i className="bi bi-hash"></i>Tooltips</span>
-                        
+                    <span><i className="bi bi-hash"></i>Button</span>
+                    <span><i className="bi bi-hash"></i>Card</span>
+                    <span><i className="bi bi-hash"></i>checkbox</span>
+                    <span><i className="bi bi-hash"></i>Colors</span>
+                    <span><i className="bi bi-hash"></i>Footers</span>
+                    <span><i className="bi bi-hash"></i>Gallery</span>
+                    <span><i className="bi bi-hash"></i>input</span>
+                    <span><i className="bi bi-hash"></i>Loading Spinners</span>
+                    <span><i className="bi bi-hash"></i>radio</span>
+                    <span><i className="bi bi-hash"></i>Scrollbar</span>
+                    <span><i className="bi bi-hash"></i>Shadows</span>
+                    <span><i className="bi bi-hash"></i>Tables</span>
+                    <span><i className="bi bi-hash"></i>Tooltips</span>
+
 
                     <p><i class="bi bi-archive"></i>Forms</p>
-                        <span><i class="bi bi-hash"></i>Login</span>
-                        <span><i class="bi bi-hash"></i>Sign up</span>
-                        <span><i class="bi bi-hash"></i>Contact Form</span>
-                        <span><i class="bi bi-hash"></i>Feedback Form</span>
-                        <span><i class="bi bi-hash"></i>Survey Form</span>
-                        <span><i class="bi bi-hash"></i>File Upload Form</span>
-                        <span><i class="bi bi-hash"></i>Profile Update Form</span>
+                    <span><i class="bi bi-hash"></i>Login</span>
+                    <span><i class="bi bi-hash"></i>Sign up</span>
+                    <span><i class="bi bi-hash"></i>Contact Form</span>
+                    <span><i class="bi bi-hash"></i>Feedback Form</span>
+                    <span><i class="bi bi-hash"></i>Survey Form</span>
+                    <span><i class="bi bi-hash"></i>File Upload Form</span>
+                    <span><i class="bi bi-hash"></i>Profile Update Form</span>
 
-                    
+
 
 
 
@@ -131,20 +135,72 @@ function Header() {
 
             </div>
             {/* <Headroom > */}
-                <header>
-                    <div className="logo">
-                        <button onClick={showNav}><CgMenuLeft className="react-icon" /></button>
+            <header>
+                <div className="header-left">
+                    <button onClick={showNav}><CgMenuLeft className="react-icon" /></button>
+                    <Link to="/" className="logo">
+                        <img src={logo} />
                         <h1>QiK</h1>
+                    </Link>
 
-                    </div>
-                    <div className="right-icons">
-                        <div className={`ri-btn ${darkmode}`} onClick={ActiveMode}>{theme ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-moon-stars-fill"></i>}</div>
-                        <div className={`ri-btn`} ><FaInfo className="react-icon" /></div>
+                    <div className="mega-menu">
+                        <ul>
+                            <li>
+                                Elements
+                                <IoIosArrowDown className="dropdown-icon" />
+                            </li>
+                            <div className="dropdown">
+                                <Link to="/miche" className="link">Accordions</Link>
+                                <Link to="/miche" className="link">Cards</Link>
+                                <Link to="/miche" className="link">Buttons</Link>
+                                <Link to="/miche" className="link">Card</Link>
+                                <Link to="/miche" className="link">checkbox</Link>
+                                <Link to="/miche" className="link">Tables</Link>
+                                <Link to="/miche" className="link">Tooltips</Link>
+                                <Link to="/miche" className="link">Navigation</Link>
+                                <Link to="/miche" className="link">Checkboxes</Link>
+                                <Link to="/miche" className="link">Radio Buttons</Link>
+
+                                <Link to="/miche" className="link">Accordions</Link>
+                                <Link to="/miche" className="link">Cards</Link>
+                                <Link to="/miche" className="link">Buttons</Link>
+                                <Link to="/miche" className="link">Card</Link>
+                                <Link to="/miche" className="link">checkbox</Link>
+                                <Link to="/miche" className="link">Tables</Link>
+                                <Link to="/miche" className="link">Tooltips</Link>
+                                <Link to="/miche" className="link">Navigation</Link>
+                                <Link to="/miche" className="link">Checkboxes</Link>
+                                <Link to="/miche" className="link">Radio Buttons</Link>
+                            </div>
+                            <li>
+                                Media
+                                <IoIosArrowDown className="dropdown-icon" />
+
+                            </li>
+                            <li>
+                                Skeletons
+                                <IoIosArrowDown className="dropdown-icon" />
+
+                            </li>
+                            <li>
+                                Forms
+                                <IoIosArrowDown className="dropdown-icon" />
+
+                            </li>
+                            <li>Headers & Footers</li>
+                            <li>Colors palettes</li>
+                        </ul>
                     </div>
 
-                </header>
+                </div>
+                <div className="right-icons">
+                    <div className={`ri-btn ${darkmode}`} onClick={ActiveMode}>{theme ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-moon-stars-fill"></i>}</div>
+                    <div className={`ri-btn`} ><FaInfo className="react-icon" /></div>
+                </div>
+
+            </header>
             {/* </Headroom> */}
-            
+
         </>
 
     )
