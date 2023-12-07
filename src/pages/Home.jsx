@@ -10,6 +10,8 @@ import { FaArrowDownLong } from "react-icons/fa6";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { Fade } from "react-awesome-reveal";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const customAnimation = keyframes`
   from {
@@ -112,27 +114,60 @@ function Home() {
 
          <div ref={usage} className="loaders-example">
             <div className="section-header">
-               <p>Loading Spinners</p>
-               <h1>Boost you projects with Loading Spinners for smooth performance!</h1>
+               <div className="sh-title">Loaders</div>
+               <h1>Improve Project UX with Loaders</h1>
+               <p>empower you projects user experience with loading animations for smooth performance!</p>
+               <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
             <Fade triggerOnce direction="up" duration={1200}>
                <div className="grid-1">
-                  <div className="grid-1-element"></div>
-                  <div className="grid-1-element"></div>
-                  <div className="grid-1-element"></div>
-                  <div className="grid-1-element"></div>
-                  <div className="grid-1-element"></div>
-                  <div className="grid-1-element"></div>
-                  <div className="grid-1-element"></div>
-                  <div className="grid-1-element"></div>
-                  <div className="grid-1-element"></div>
-                  <div className="grid-1-element"></div>
+                  <div className="grid-1-element">
+                     <svg class="container1" viewBox="0 0 40 40" height="40" width="40">
+                        <circle class="bg1" cx="20" cy="20" r="17.5" pathlength="100" stroke-width="5px" fill="none" />
+                        <circle class="snake1" cx="20" cy="20" r="17.5" pathlength="100" stroke-width="5px" fill="none" />
+                     </svg>
+                  </div>
+                  <div className="grid-1-element">
+                     <svg class="container2" viewBox="0 0 40 40" height="40" width="40">
+                        <circle class="bg2" cx="20" cy="20" r="17.5" pathlength="100" stroke-width="5px" fill="none" />
+                        <circle class="snake2" cx="20" cy="20" r="17.5" pathlength="100" stroke-width="5px" fill="none" />
+                     </svg>
+                  </div>
+                  <div className="grid-1-element">
+                     <svg class="container3" x="0px" y="0px" viewBox="0 0 37 37" height="37" width="37" preserveAspectRatio="xMidYMid meet">
+                        <path class="bg3" fill="none" stroke-width="5" pathLength="100" d="M0.37 18.5 C0.37 5.772 5.772 0.37 18.5 0.37 S36.63 5.772 36.63 18.5 S31.228 36.63 18.5 36.63 S0.37 31.228 0.37 18.5">
+                        </path>
+                        <path class="snake3" fill="none" stroke-width="5" pathLength="100" d="M0.37 18.5 C0.37 5.772 5.772 0.37 18.5 0.37 S36.63 5.772 36.63 18.5 S31.228 36.63 18.5 36.63 S0.37 31.228 0.37 18.5">
+                        </path>
+                     </svg>
+                  </div>
+                  <div className="grid-1-element">
+                     <div className="container4"></div>
+                  </div>
+                  <div className="grid-1-element">
+                     <span class="container5"></span>
+                  </div>
+                  <div className="grid-1-element">
+                     <span class="container6"></span>
+                  </div>
+                  <div className="grid-1-element">
+                     <div class="container7"></div>
+                  </div>
+                  <div className="grid-1-element">
+                     <div className="container8"></div>
+                  </div>
+                  <div className="grid-1-element">
+                     <span class="container9"></span>
+                  </div>
+                  <div className="grid-1-element">
+                     <div className="container10"></div>
+                  </div>
                </div>
             </Fade>
          </div>
 
 
-         <div className="grid-container example-container">
+         {/* <div className="grid-container example-container">
             <h1>Example</h1>
             <div className="example">
                <div className="e1">
@@ -177,7 +212,7 @@ function Home() {
                   </div>
                </div>
             </div>
-         </div>
+         </div> */}
 
       </div>
    )
