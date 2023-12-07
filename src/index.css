@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Prompt:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins&family=Prompt:wght@800&display=swap');
 
 * {
     padding: 0;
@@ -16,19 +16,20 @@ body {
     /* Light Colors */
     --main-color: #64b6e5;
     --body-color: #ffffff;
-    --text-color: #000;
-    --text-color-low-opacity: #575757;
+    --text-color: #141414;
+    --text-color-low-opacity: #7e7e7e;
     --border-lines: #99999942;
     --scroll-thumb: #cfcfcf;
     --shadow-color: #7f7d9228;
     --item-bg-color: #e6e6e6;
-    --item-hover-color: #d4d4d467;
+    --item-hover-color: #f3f3f3;
     --menu-color: #fcfcfc;
     --text-editor-color: #3a3a42;
     --copy-button-bg: #4d4d538e;
     --copy-icon-color: #eee;
     --wave-color: #eee;
-    --dropdown-color: #ffffffbd;
+    --dropdown-color: #ffffff;
+    --header-color: #ffffffd2;
 }
 
 body.dark {
@@ -51,6 +52,7 @@ body.dark {
 .container {
     height: fit-content;
     background-color: var(--body-color);
+    background-image: linear-gradient(to bottom, #cfcbff17 0%,  var(--body-color)  100%);
     padding: 0px;
     transition: .3s;
     font-family: 'Poppins', sans-serif;
@@ -65,14 +67,18 @@ body#with-navbar .container {
 header {
     width: 100%;
     height: fit-content;
-    padding: 7px 50px;
+    padding: 10px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
+    background-color: var(--header-color);
     z-index: 10;
     border-bottom: 1px solid var(--border-lines);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .header-left{
@@ -113,16 +119,17 @@ header {
 }
 
 .logo img{
-    width: 30px;
+    width: 40px;
 }
 
 .logo h1 {
-    font-family:  "Prompt", sans-serif;
-    font-size: 18px;
+    /* font-family:  "Prompt", sans-serif; */
+    font-size: 16px;
+    font-weight: bold;
     letter-spacing: 1px;
     color: var(--text-color);
-    font-weight: lighter;
     /* background-color: cadetblue; */
+    display: none;
 }
 
 .mega-menu{
@@ -131,42 +138,80 @@ header {
 
 .mega-menu ul{
     display: flex;
-    gap: 25px;
+    gap: 3px;
 }
 
 .mega-menu ul li{
     list-style: none;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 500;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     /* background-color: cadetblue; */
-    gap: 5px;
+    gap: 6px;
     cursor: pointer;
     color: var(--text-color);
+    position: relative;
+    padding: 0 9px 0 12px;
+    border-radius: 5px;
+    height: 35px;
+}
+
+.mega-menu ul li.with-sup{
+    padding-right: 5px;
+    /* gap: 4px; */
+}
+
+
+.mega-menu ul li sup{
+    align-self: flex-start;
+    color: var(--main-color);
+    /* background-color: var(--item-hover-color); */
+    border-radius: 2px;
+    /* padding: 3px 6px; */
+    margin-top: 3px;
+    text-transform: uppercase;
 }
 
 .dropdown-icon{
-    margin-top: 2px;
-    padding-top: 1px;
+    /* margin-top: 2px; */
+    /* padding-top: 1px; */
+    color: var(--text-color-low-opacity);
 }
 
 .dropdown{
     position: absolute;
-    top: 85%;
+    top: 40px;
+    left: -20%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    max-height: 300px;
-    max-width: 250px;
+    gap: 0px;
+    min-width: 250px;
     background-color: var(--dropdown-color);
-    z-index: 99;
+    z-index: 999;
     border: 1px solid var(--border-lines);
     padding: 10px;
     border-radius: 10px;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    transform: scale(0.95);
+    transition: .2s;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 83vh;
     overflow-y: auto;
+}
+
+.mega-menu ul li:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.mega-menu ul li.hovered {
+    /* Add styles for the parent item when hovered */
+    background-color: var(--item-hover-color); /* Example background color */
 }
 
 .dropdown .link{
@@ -174,10 +219,14 @@ header {
     text-decoration: none;
     cursor: pointer;
     font-size: 13px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
 }
 
 .dropdown .link:hover{
-    background-color: firebrick;
+    background-color: var(--item-hover-color);
+    color: var(--main-color);
 }
 
 .menu {
@@ -380,51 +429,105 @@ header {
 }
 
 .right-icons {
+    /* background-color: cadetblue; */
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
 }
 
 .ri-btn {
     /* background-color: var(--body-color); */
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    width: 45px;
-    padding: 10px;
-    height: 45px;
+    width: 38px;
+    height: 35px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 8px;
     /* border: 1px solid var(--border-lines); */
     position: relative;
     cursor: pointer;
-    transition: .2s;
     background-color: transparent;
-    font-size: 20px;
+    font-size: 22px;
+    transition: .2s;
     color: var(--text-color);
 }
 
 .ri-btn:hover {
     /* box-shadow: var(--shadow-color) 0px 0px 14px; */
+    /* background-color: var(--item-hover-color); */
+}
+
+.ri-btn::after{
+    content: "Click to switch";
+    color: var(--text-color-low-opacity);
+    background-color: var(--body-color);
+    border: 1px solid var(--border-lines);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 110%;
+    transition: .2s;
+    opacity: 0;
+    visibility: hidden;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.ri-btn:hover::after{
+    opacity: 1;
+    visibility: visible;
+    top: 120%;
+}
+
+.ri-btn i {
+    color: var(--text-color-low-opacity);
+}
+
+.ri-btn:hover i{
+    color: orange;
+}
+
+.creators{
+    font-size: 13px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    padding: 0 20px;
+    border-radius: 8px;
+    height: 38px;
+    overflow: hidden;
+}
+
+.creators:before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background-image: linear-gradient(
+        140deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255, 255, 255, 0.466),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear;
+}
+
+.creators:hover{
     background-color: var(--item-hover-color);
 }
 
-.react-icon,
-.ri-btn i {
-    transition: .1s;
-    color: var(--text-color);
-}
-
-.ri-btn:active .react-icon,
-.ri-btn:active i,
-.logo button:active .react-icon {
-    transform: scale(0.9);
-}
-
-/* 
-.ri-btn i {
-    font-size: 19px;
-    color: var(--text-color);
-} */
 
 .home-container{
     height: fit-content;
@@ -433,7 +536,7 @@ header {
 }
 
 .hero {
-    min-height: 80vh;
+    min-height: 520px;
     height: fit-content;
     width: 100%;
     /* background-color: cadetblue;  */
@@ -443,14 +546,21 @@ header {
     flex-direction: column;
     padding: 30px;
     margin-bottom: 100px;
+    position: relative;
+    overflow: hidden;
 }
 
+
 .hero h1 {
-    font-size: 70px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 90px;
     text-transform: capitalize;
     color: var(--text-color);
     text-align: center;
+    max-width: 1000px;
+    margin-top: 40px;
 }
+
 
 .hero h1 span {
     color: var(--main-color);
@@ -460,36 +570,64 @@ header {
     text-align: center;
     color: var(--text-color-low-opacity);
     max-width: 700px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
-.sroll-down {
+.scroll-down {
     max-width: 600px;
-    width: 45px;
-    height: 45px;
+    width: fit-content;
+    height: 52px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; */
+    /* bottom: 0; */
+    position: relative;
     border-radius: 10px;
+    padding: 0 40px;
     transition: .2s;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: lighter;
+    color: white;
+    overflow: hidden;
+    margin-top: 50px;
 }
 
-.sroll-down:hover {
-    transform: scale(1.3);
-    border: 1px solid var(--border-lines);
-    background-color: var(--item-hover-color);
+.scroll-down, .creators{
+    background-image: linear-gradient(150deg, var(--main-color) 0%,  #aa41d4  170%);
 }
 
-.sroll-down:active {
-    transform: scale(1.2);
+
+.scroll-down:before, .creators:before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background-image: linear-gradient(
+        140deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255, 255, 255, 0.295),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear;
 }
 
-.sroll-down i {
+@keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+
+.scroll-down:active {
+    opacity: .7;
+}
+
+.scroll-down i {
     color: var(--text-color-low-opacity);
     font-size: 25px;
     padding-top: 2px;
@@ -962,10 +1100,6 @@ header {
 }
 
 @media screen and (max-width: 500px) {
-    .hero {
-        min-height: 85vh;
-        margin-bottom: 70px;
-    }
 
     #nav-middle-toggle {
         display: none;
@@ -1026,7 +1160,7 @@ header {
 /* CUSTOM SCROLL */
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 9px;
 }
 
 ::-webkit-scrollbar-track {

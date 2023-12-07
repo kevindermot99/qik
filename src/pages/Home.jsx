@@ -6,6 +6,22 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { LuMousePointerClick } from "react-icons/lu";
 import { IoCheckmark } from "react-icons/io5";
+import { FaArrowDownLong } from "react-icons/fa6";
+import Reveal from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
+import { Fade } from "react-awesome-reveal";
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 70px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
 
 function Home() {
    const usage = useRef(null)
@@ -79,15 +95,21 @@ function Home() {
       <div className="home-container">
 
          <div className="hero">
-            <h1><span>Q</span>uick <span>i</span>nspiration <span>K</span>it</h1>
-            <p>Hi there, welcome to QiK, your free toolbox for quick web development. Find ready-to-use loaders, buttons, and more. Innovate easily with speed and creativity—all in one kit!</p>
-            <div className="sroll-down" onClick={executeScroll}>
-               <i class="bi bi-arrow-bar-down"></i>
-            </div>
+            <Reveal keyframes={customAnimation} triggerOnce duration={1200} delay={0} >
+               <h1>Designing Tomorrow, Today.</h1>
+            </Reveal>
+            <Reveal keyframes={customAnimation} triggerOnce duration={1200} delay={100}>
+               <p>Your Free Web UI Inspiration, Unleash Creativity Without Limits.</p>
+            </Reveal>
+            <Reveal keyframes={customAnimation} triggerOnce duration={1200} delay={200}>
+               <div className="scroll-down" onClick={executeScroll}>
+                  Get Start For Free <FaArrowDownLong />
+               </div>
+            </Reveal>
          </div>
 
          <div ref={usage} className="usage">
-            
+
             <div className="usagetitle">
                <h2><i className="bi bi-hash"></i>Usage</h2>
             </div>
@@ -172,46 +194,6 @@ function Home() {
                </div>
             </div>
          </div>
-
-         {/* <div className="grid-container">
-            <h1><i className="bi bi-hash"></i>Breadcrumbs</h1>
-            <div className="gc-grids">
-
-               <span>
-                  <div className="db-container">
-                     <p>Home</p>
-                     <div className="separator"></div>
-                     <p>Shop</p>
-                     <div className="separator"></div>
-                     <p>You are here</p>
-                  </div>
-               </span>
-
-               <span>
-                  <div className="db-container bc2">
-                     <p><i class="bi bi-house-door"></i> Home</p>
-                     <div className="separator"></div>
-                     <p><i class="bi bi-shop"></i> Shop</p>
-                     <div className="separator"></div>
-                     <p><i class="bi bi-file-earmark"></i> You are here</p>
-                  </div>
-               </span>
-
-
-
-            </div>
-         </div> */}
-
-         {/* <SyntaxHighlighter
-               language="javascript"
-               style={monokaiSublime}
-               customStyle={{
-                  fontFamily: "consolas",
-                  padding: "30px"
-               }}
-            >
-               {codeString}
-            </SyntaxHighlighter> */}
 
       </div>
    )

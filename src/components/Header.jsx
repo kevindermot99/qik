@@ -6,6 +6,8 @@ import { FaInfo } from "react-icons/fa";
 import Headroom from "react-headroom";
 import logo from "../images/logo.png"
 import { IoIosArrowDown } from "react-icons/io";
+import { PiSun } from "react-icons/pi";
+import { RiMoonClearLine } from "react-icons/ri";
 
 
 function Header() {
@@ -79,6 +81,17 @@ function Header() {
         };
     }, []); // Empty dependency array ensures the effect runs once on mount
 
+    // making nav bar links keep hoverd when drop down shows
+    const parentItems = document.querySelectorAll('.mega-menu ul li');
+    parentItems.forEach(parentItem => {
+        parentItem.addEventListener('mouseover', function () {
+            this.classList.add('hovered');
+        });
+
+        parentItem.addEventListener('mouseout', function () {
+            this.classList.remove('hovered');
+        });
+    });
 
     return (
         <>
@@ -146,56 +159,67 @@ function Header() {
                     <div className="mega-menu">
                         <ul>
                             <li>
-                                Elements
+                                <p>Elements</p>
                                 <IoIosArrowDown className="dropdown-icon" />
-                            </li>
-                            <div className="dropdown">
-                                <Link to="/miche" className="link">Accordions</Link>
-                                <Link to="/miche" className="link">Cards</Link>
-                                <Link to="/miche" className="link">Buttons</Link>
-                                <Link to="/miche" className="link">Card</Link>
-                                <Link to="/miche" className="link">checkbox</Link>
-                                <Link to="/miche" className="link">Tables</Link>
-                                <Link to="/miche" className="link">Tooltips</Link>
-                                <Link to="/miche" className="link">Navigation</Link>
-                                <Link to="/miche" className="link">Checkboxes</Link>
-                                <Link to="/miche" className="link">Radio Buttons</Link>
-
-                                <Link to="/miche" className="link">Accordions</Link>
-                                <Link to="/miche" className="link">Cards</Link>
-                                <Link to="/miche" className="link">Buttons</Link>
-                                <Link to="/miche" className="link">Card</Link>
-                                <Link to="/miche" className="link">checkbox</Link>
-                                <Link to="/miche" className="link">Tables</Link>
-                                <Link to="/miche" className="link">Tooltips</Link>
-                                <Link to="/miche" className="link">Navigation</Link>
-                                <Link to="/miche" className="link">Checkboxes</Link>
-                                <Link to="/miche" className="link">Radio Buttons</Link>
-                            </div>
-                            <li>
-                                Media
-                                <IoIosArrowDown className="dropdown-icon" />
-
+                                <div className="dropdown">
+                                    <Link to="/" className="link">Accordions</Link>
+                                    <Link to="/" className="link">Buttons</Link>
+                                    <Link to="/" className="link">Cards</Link>
+                                    <Link to="/" className="link">Checkboxes</Link>
+                                    <Link to="/" className="link">Footers</Link>
+                                    <Link to="/" className="link">Loading Spinners</Link>
+                                    <Link to="/" className="link">Menu</Link>
+                                    <Link to="/" className="link">Navigation Bars</Link>
+                                    <Link to="/" className="link">Radio Buttons</Link>
+                                    <Link to="/" className="link">Shadows</Link>
+                                    <Link to="/" className="link">Tables</Link>
+                                    <Link to="/" className="link">Tooltips</Link>
+                                      
+                                </div>
                             </li>
                             <li>
-                                Skeletons
+                                <p>Media</p>
                                 <IoIosArrowDown className="dropdown-icon" />
-
+                                <div className="dropdown">
+                                    <Link to="/" className="link">Audio Players</Link>
+                                    <Link to="/" className="link">Image Galleries</Link>
+                                    <Link to="/" className="link">Video Players</Link>
+                                </div>
                             </li>
                             <li>
-                                Forms
+                                <p>Templates</p>
                                 <IoIosArrowDown className="dropdown-icon" />
-
+                                <div className="dropdown">
+                                    <Link to="/" className="link">Mobile App website</Link>
+                                    <Link to="/" className="link">Brand Website</Link>
+                                    <Link to="/" className="link">Admin Dashboard</Link>
+                                    <Link to="/" className="link">E-commerce Website</Link>
+                                    <Link to="/" className="link">Portfolio Website</Link>
+                                    <Link to="/" className="link">Real Estate Website</Link>
+                                    <Link to="/" className="link">Restaurant Website</Link>
+                                </div>
                             </li>
-                            <li>Headers & Footers</li>
-                            <li>Colors palettes</li>
+                            <li>
+                                <p>Forms</p>
+                                <IoIosArrowDown className="dropdown-icon" />
+                                <div className="dropdown">
+                                    <Link to="/" className="link">Login & Sign up Forms</Link>
+                                    <Link to="/" className="link">Contact Forms</Link>
+                                    <Link to="/" className="link">Feedback Forms</Link>
+                                    <Link to="/" className="link">Survey Forms</Link>
+                                </div>
+                            </li>
+                            <li className="with-sup">
+                                <p>Colors palettes</p>
+                                <sup>beta</sup>
+                            </li>
                         </ul>
                     </div>
 
                 </div>
                 <div className="right-icons">
-                    <div className={`ri-btn ${darkmode}`} onClick={ActiveMode}>{theme ? <i class="bi bi-sun-fill"></i> : <i class="bi bi-moon-stars-fill"></i>}</div>
-                    <div className={`ri-btn`} ><FaInfo className="react-icon" /></div>
+                    <div className={`ri-btn ${darkmode}`} onClick={ActiveMode}>{theme ? <PiSun /> : <RiMoonClearLine />}</div>
+                    <div className="creators">Creators</div>
                 </div>
 
             </header>
