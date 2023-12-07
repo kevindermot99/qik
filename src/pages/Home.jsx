@@ -26,7 +26,20 @@ const customAnimation = keyframes`
 function Home() {
    const usage = useRef(null)
 
-   const executeScroll = () => usage.current.scrollIntoView()
+   // const executeScroll = () => usage.current.scrollIntoView()
+   const executeScroll = () => {
+      const topElement = document.getElementById('grid-1'); // Replace 'top' with the ID of the element you want to scroll to
+      setTimeout(() => {
+         if (topElement) {
+            topElement.scrollIntoView({
+               duration: 5000, // specify the duration of the scroll animation in milliseconds
+               smooth: 'easeInOutQuart', // specify the easing function
+            });
+         } 
+      }, 50);
+      
+   };
+
    const [exampleHtml, setexampleHtml] = useState(false);
    const [exampleCss, setexampleCss] = useState(false);
 
@@ -108,43 +121,8 @@ function Home() {
             </Reveal>
          </div>
 
-         <div ref={usage} className="usage">
+         <div ref={usage} className="grid-1" id="grid-1">
 
-            <div className="usagetitle">
-               <h2><i className="bi bi-hash"></i>Usage</h2>
-            </div>
-            <div className="steps">
-               <span>
-                  <div>
-                     <h1>1: Explore Collections</h1>
-                     <p>Discover a variety of elements by browsing through our collections.</p>
-                  </div>
-                  <div className="example-loader">
-                     <div className="loader-1"></div>
-                     <div className="loader-2"></div>
-                     <div className="loader-3"></div>
-                     <div></div>
-                  </div>
-               </span>
-               <span>
-                  <div>
-                     <h1>2: Choose and Reveal</h1>
-                     <p>Pick your desired item, click on the source, and unveil the code.</p>
-                  </div>
-                  <div className="exmple-source-btn">
-                     <button><LuMousePointerClick className="react-icon" />Click to Reveal</button>
-                  </div>
-               </span>
-               <span>
-                  <div>
-                     <h1>3: Integrate Easily</h1>
-                     <p>Copy the code provided and paste into your project.</p>
-                  </div>
-                  <div className="exmple-source-btn">
-                     <button><TbCopy className="react-icon" />Copy</button>
-                  </div>
-               </span>
-            </div>
 
          </div>
 
