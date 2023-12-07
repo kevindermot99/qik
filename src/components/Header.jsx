@@ -8,7 +8,6 @@ import logo from "../images/logo.png"
 import { IoIosArrowDown } from "react-icons/io";
 import { PiSun } from "react-icons/pi";
 import { RiMoonClearLine } from "react-icons/ri";
-import { Fade } from "react-awesome-reveal";
 
 
 function Header() {

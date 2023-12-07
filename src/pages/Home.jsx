@@ -24,21 +24,10 @@ const customAnimation = keyframes`
 `;
 
 function Home() {
-   const usage = useRef(null)
+   const usage = useRef(null);
 
    // const executeScroll = () => usage.current.scrollIntoView()
-   const executeScroll = () => {
-      const topElement = document.getElementById('grid-1'); // Replace 'top' with the ID of the element you want to scroll to
-      setTimeout(() => {
-         if (topElement) {
-            topElement.scrollIntoView({
-               duration: 5000, // specify the duration of the scroll animation in milliseconds
-               smooth: 'easeInOutQuart', // specify the easing function
-            });
-         } 
-      }, 50);
-      
-   };
+
 
    const [exampleHtml, setexampleHtml] = useState(false);
    const [exampleCss, setexampleCss] = useState(false);
@@ -115,16 +104,33 @@ function Home() {
                <p>Your Free Web UI Inspiration, Unleash Creativity Without Limits.</p>
             </Reveal>
             <Reveal keyframes={customAnimation} triggerOnce duration={1200} delay={200}>
-               <div className="scroll-down" onClick={executeScroll}>
+               <div className="scroll-down" onClick={() => usage.current?.scrollIntoView({ behavior: "smooth" })}>
                   Get Start For Free <FaArrowDownLong />
                </div>
             </Reveal>
          </div>
 
-         <div ref={usage} className="grid-1" id="grid-1">
-
-
+         <div ref={usage} className="loaders-example">
+            <div className="section-header">
+               <p>Loading Spinners</p>
+               <h1>Boost you projects with Loading Spinners for smooth performance!</h1>
+            </div>
+            <Fade triggerOnce direction="up" duration={1200}>
+               <div className="grid-1">
+                  <div className="grid-1-element"></div>
+                  <div className="grid-1-element"></div>
+                  <div className="grid-1-element"></div>
+                  <div className="grid-1-element"></div>
+                  <div className="grid-1-element"></div>
+                  <div className="grid-1-element"></div>
+                  <div className="grid-1-element"></div>
+                  <div className="grid-1-element"></div>
+                  <div className="grid-1-element"></div>
+                  <div className="grid-1-element"></div>
+               </div>
+            </Fade>
          </div>
+
 
          <div className="grid-container example-container">
             <h1>Example</h1>
