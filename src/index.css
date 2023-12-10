@@ -441,7 +441,7 @@ header {
 }
 
 
-.loaders-example {
+.elements-example {
     width: 100%;
     height: fit-content;
     background-color: var(--item-hover-color);
@@ -1171,7 +1171,7 @@ header {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 80px 0;
     gap: 15px;
     font-family: 'Hedvig Letters Serif', serif;
 }
@@ -1211,6 +1211,35 @@ header {
 
 
 
+
+
+
+/* Footer */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: var(--text-color-low-opacity);
+    font-size: 13px;
+    position: relative;
+    overflow: hidden;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.footer::after{
+    content: "";
+    width: 95%;
+    height: 1px;
+    background-color: var(--border-lines);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
 
 
 

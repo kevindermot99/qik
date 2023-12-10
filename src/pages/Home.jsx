@@ -37,7 +37,8 @@ const customAnimation = keyframes`
 
 function Home() {
    const loaders = useRef(null);
-   const usage = useRef(null);
+   const buttons = useRef(null);
+   const shadows = useRef(null);
 
    // const executeScroll = () => usage.current.scrollIntoView()
 
@@ -64,7 +65,6 @@ function Home() {
             </Reveal>
          </div>
 
-
          <div className="showroom">
             <div className="section-header">
                <Fade triggerOnce><h1>Provided For you !</h1></Fade>
@@ -76,8 +76,8 @@ function Home() {
                         <p>Make your project look great with ready-made elements for a professional design that's quick and efficient.</p>
                         <p className="links">
                            <h5 onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Loaders</h5>
-                           <h5><FaLink />Buttons</h5>
-                           <h5><FaLink />Shadows</h5>
+                           <h5 onClick={() => buttons.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Buttons</h5>
+                           <h5 onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Shadows</h5>
                            and more.
                         </p>
                      </div>
@@ -117,7 +117,7 @@ function Home() {
             </div>
          </div>
 
-
+         {/* Quote kevin */}
          <Fade delay={300} duration={1300} triggerOnce>
             <div className="review">
                <p>“ Design with heart, create with soul. Every pixel tells a story. Your unique expression, simplicity's beauty. ”</p>
@@ -131,8 +131,7 @@ function Home() {
             </div>
          </Fade>
 
-
-         <div ref={loaders} className="loaders-example">
+         <div ref={loaders} className="elements-example">
             <div className="section-header">
                <div className="sh-title"><div className="identifier" onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></div>Loaders</div>
                <h1>Improve Project UX with Loaders</h1>
@@ -186,6 +185,7 @@ function Home() {
             </Fade>
          </div>
 
+         {/* Quote chris */}
          <Fade delay={300} duration={1300} triggerOnce>
             <div className="review">
                <p>“ Qik: Where creativity meets efficiency. Empowering creators to bring ideas to life effortlessly, one pixel at a time. ”</p>
@@ -199,6 +199,105 @@ function Home() {
             </div>
          </Fade>
 
+         <div ref={buttons} className="elements-example">
+            <div className="section-header">
+               <div className="sh-title"><div className="identifier" onClick={() => buttons.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></div>Buttons</div>
+               <h1>Elevate UX with Dynamic Buttons</h1>
+               <p>Boost your project's user experience using animated buttons for a seamless and engaging interface!</p>
+               <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
+            </div>
+            <Fade triggerOnce direction="up" duration={1200}>
+               <div className="grid-2">
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+               </div>
+            </Fade>
+         </div>
+
+         {/* Quote nickson */}
+         <Fade delay={300} duration={1300} triggerOnce>
+            <div className="review">
+               <p>“ Ideas come to life with a click. Simple and innovative, created just for you! ”</p>
+               <div className="by">
+                  <img src={nick} height="50" width="50" />
+                  <span>
+                     <h1>Hirwa Nickson</h1>
+                     <p>Creator</p>
+                  </span>
+               </div>
+            </div>
+         </Fade>
+
+         <div ref={shadows} className="elements-example">
+            <div className="section-header">
+               <div className="sh-title"><div className="identifier" onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></div>Shadows</div>
+               <h1>Enhance UX with Dynamic Shadows</h1>
+               <p>Elevate your project's experience with engaging dynamic shadows for a seamless interface!</p>
+               <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
+            </div>
+            <Fade triggerOnce direction="up" duration={1200}>
+               <div className="grid-2">
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+                  <div className="grid-2-element">
+                     
+                  </div>
+               </div>
+            </Fade>
+         </div>
 
 
       </div>
