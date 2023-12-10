@@ -334,8 +334,8 @@ header {
 }
 
 .hero {
-    min-height: 550px;
-    height: fit-content;
+    height: 90vh;
+    max-height: 600px;
     width: 100%;
     /* background-color: cadetblue;  */
     display: flex;
@@ -349,7 +349,7 @@ header {
 
 
 .hero h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
     font-size: 80px;
     text-transform: capitalize;
     color: var(--text-color);
@@ -367,7 +367,7 @@ header {
     text-align: center;
     color: var(--text-color-low-opacity);
     max-width: 700px;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .scroll-down {
@@ -477,14 +477,33 @@ header {
     font-size: 16px;
     font-weight: lighter;
     border-radius: 50px;
-    padding: 5px 25px;
+    padding: 8px 20px;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+.sh-title .identifier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: .2s;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.sh-title .identifier:hover{
+    background-color: #cccee941;
 }
 
 .section-header h1 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 43px;
+    font-size: 35px;
     font-weight: bold;
     width: 100%;
     max-width: 800px;
@@ -494,7 +513,7 @@ header {
 
 .section-header p {
     color: var(--text-color-low-opacity);
-    font-size: 18px;
+    font-size: 17px;
     max-width: 600px;
     text-align: center;
 }
@@ -580,7 +599,6 @@ header {
     transition: .2s;
     cursor: pointer;
 }
-
 
 /* loader examples */
 
@@ -1052,9 +1070,72 @@ header {
     100% {transform: rotate(360deg)}
   }
 
-      
 
+  .showroom{
+    width: 100%;
+    height: fit-content;
+    padding: 30px;
+    scroll-margin: 60px;
+}
 
+.showroom-grid{
+    width: 100%;
+    height: fit-content;
+    max-width: 1100px;
+    margin: auto;
+    /* background-color: cadetblue; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.showroom-grid div{
+    height: 350px;
+    background-color: var(--item-hover-color);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.showroom-grid div:first-child span{
+    color: skyblue;
+}
+
+.showroom-grid div span{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.showroom-grid div h1{
+    font-size: 20px;
+    text-align: left;
+}
+
+.showroom-grid div p{
+    font-size: 17px;
+    text-align: left;
+}
+
+.showroom-grid div span svg{
+    font-size: 20px;
+}
+
+.showroom-grid div img{
+    width: 250px;
+    align-self: flex-end;
+}
 
 
 

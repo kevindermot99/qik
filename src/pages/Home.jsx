@@ -12,6 +12,9 @@ import { keyframes } from "@emotion/react";
 import { Fade } from "react-awesome-reveal";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { FaLink } from "react-icons/fa6";
+import { BsStars } from "react-icons/bs";
+import uiDesignPng from "../images/Ui-Design.png"
 
 const customAnimation = keyframes`
   from {
@@ -26,6 +29,7 @@ const customAnimation = keyframes`
 `;
 
 function Home() {
+   const loaders = useRef(null);
    const usage = useRef(null);
 
    // const executeScroll = () => usage.current.scrollIntoView()
@@ -34,65 +38,6 @@ function Home() {
    const [exampleHtml, setexampleHtml] = useState(false);
    const [exampleCss, setexampleCss] = useState(false);
 
-
-   const exampleLoaderHtml = `<div class="loader"></div>`;
-   const exampleLoaderCss =
-      `.loader {
-   width: 35px;
-   height: 35px;
-   border: 3px solid #64b6e5;
-   border-bottom-color: #c7c7c7;
-   border-left-color: #c7c7c7;
-   border-radius: 50%;
-   display: inline-block;
-   box-sizing: border-box;
-   animation: rotation 1s linear infinite;
-}
-
-
-@keyframes rotation {
-   0% {
-       transform: rotate(0deg);
-   }
-
-   100% {
-       transform: rotate(360deg);
-   }
-}
-`;
-
-   const copyExampleHtml = async () => {
-
-      try {
-         await navigator.clipboard.writeText(exampleLoaderHtml);
-         setexampleHtml(true)
-         setTimeout(() => {
-            setexampleHtml(false)
-         }, 1500);
-      } catch (err) {
-         console.error(
-            "Unable to copy to clipboard.",
-            err
-         );
-         alert("Copy to clipboard failed.");
-      }
-   }
-
-   const copyExampleCss = async () => {
-      try {
-         await navigator.clipboard.writeText(exampleLoaderCss);
-         setexampleCss(true)
-         setTimeout(() => {
-            setexampleCss(false)
-         }, 1500);
-      } catch (err) {
-         console.error(
-            "Unable to copy to clipboard.",
-            err
-         );
-         alert("Copy to clipboard failed.");
-      }
-   }
 
 
    return (
@@ -106,15 +51,44 @@ function Home() {
                <p>Your Free Web UI Inspiration, Unleash Creativity Without Limits.</p>
             </Reveal>
             <Reveal keyframes={customAnimation} triggerOnce duration={1200} delay={200}>
-               <div className="scroll-down" onClick={() => usage.current?.scrollIntoView({ behavior: "smooth" })}>
+               <div className="scroll-down" onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}>
                   Get Start For Free <FaArrowDownLong />
                </div>
             </Reveal>
          </div>
 
-         <div ref={usage} className="loaders-example">
+         <div className="showroom">
             <div className="section-header">
-               <div className="sh-title">Loaders</div>
+               <h1>kick-start</h1>
+               <div className="showroom-grid">
+                  <div>
+                     <span><BsStars /> pre-made Ui Elements</span>
+                     <h1>UI Elegance in a Snap</h1>
+                     <p>Make your project look great with ready-made elements for a professional design that's quick and efficient.</p>
+                     <img src={uiDesignPng} alt="" />
+                  </div>
+                  <div>
+                     <span>Play Perfect: Media Players</span>
+                     <h1>Custom Players</h1>
+                     <p>Elevate user experience with our media players. Seamlessly integrate intuitive playback features for engaging and entertaining content.</p>
+                  </div>
+                  <div>
+                     <span>Website Templates</span>
+                     <h1>Web Wonders: Easy Design Kickstart</h1>
+                     <p>Launch your online presence with customizable website templates. From sleek portfolios to powerful business sites, create with style and ease.</p>
+                  </div>
+                  <div>
+                     <span>Color Palettes</span>
+                     <h1>Palette Perfection: Inspiring Hues</h1>
+                     <p> Infuse life into projects with our curated color palettes. Discover vibrant energy or soothing harmony to express your creativity</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div ref={loaders} className="loaders-example">
+            <div className="section-header">
+               <div className="sh-title"><div className="identifier" onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></div>Loaders</div>
                <h1>Improve Project UX with Loaders</h1>
                <p>empower you projects user experience with loading animations for smooth performance!</p>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
