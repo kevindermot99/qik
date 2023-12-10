@@ -13,8 +13,13 @@ import { Fade } from "react-awesome-reveal";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FaLink } from "react-icons/fa6";
-import { BsStars } from "react-icons/bs";
-import uiDesignPng from "../images/Ui-Design.png"
+import { BsGrid1X2Fill } from "react-icons/bs";
+import { FaPlayCircle } from "react-icons/fa";
+import { CgTemplate } from "react-icons/cg";
+import { MdOutlineInvertColors } from "react-icons/md";
+import kevin from "../images/kevin.jpg"
+
+
 
 const customAnimation = keyframes`
   from {
@@ -57,34 +62,58 @@ function Home() {
             </Reveal>
          </div>
 
+
          <div className="showroom">
             <div className="section-header">
-               <h1>kick-start</h1>
+               <Fade triggerOnce><h1>Provided For you !</h1></Fade>
                <div className="showroom-grid">
-                  <div>
-                     <span><BsStars /> pre-made Ui Elements</span>
-                     <h1>UI Elegance in a Snap</h1>
-                     <p>Make your project look great with ready-made elements for a professional design that's quick and efficient.</p>
-                     <img src={uiDesignPng} alt="" />
-                  </div>
-                  <div>
-                     <span>Play Perfect: Media Players</span>
-                     <h1>Custom Players</h1>
-                     <p>Elevate user experience with our media players. Seamlessly integrate intuitive playback features for engaging and entertaining content.</p>
-                  </div>
-                  <div>
-                     <span>Website Templates</span>
-                     <h1>Web Wonders: Easy Design Kickstart</h1>
-                     <p>Launch your online presence with customizable website templates. From sleek portfolios to powerful business sites, create with style and ease.</p>
-                  </div>
-                  <div>
-                     <span>Color Palettes</span>
-                     <h1>Palette Perfection: Inspiring Hues</h1>
-                     <p> Infuse life into projects with our curated color palettes. Discover vibrant energy or soothing harmony to express your creativity</p>
-                  </div>
+                  <Fade direction="left" triggerOnce>
+                     <div className="sg-card c1">
+                        <span><BsGrid1X2Fill /> pre-made Ui Elements</span>
+                        <h1>UI Elegance in a Snap</h1>
+                        <p>Make your project look great with ready-made elements for a professional design that's quick and efficient.</p>
+                     </div>
+                  </Fade>
+                  <Fade direction="right" triggerOnce>
+                     <div className="sg-card c2">
+                        <span><FaPlayCircle /> Play Perfect: Media Players</span>
+                        <h1>Custom Players</h1>
+                        <p>Elevate user experience with our media players. Seamlessly integrate intuitive playback features for engaging and entertaining content.</p>
+                     </div>
+                  </Fade>
+                  <Fade direction="left" triggerOnce>
+                     <div className="sg-card c3">
+                        <span><CgTemplate /> Website Templates</span>
+                        <h1>Free Web Templates</h1>
+                        <p>Launch your online presence with customizable website templates. From sleek portfolios to powerful business sites, create with style and ease.</p>
+                     </div>
+                  </Fade>
+                  <Fade direction="right" triggerOnce>
+                     <div className="sg-card c4">
+                        <span><MdOutlineInvertColors /> Color Palettes</span>
+                        <h1>Palette Perfection: Inspiring Hues</h1>
+                        <p> Infuse life into projects with our curated color palettes. Discover vibrant energy or soothing harmony to express your creativity</p>
+                     </div>
+                  </Fade>
+
                </div>
             </div>
          </div>
+
+
+         <Fade delay={300} duration={2000} triggerOnce>
+            <div className="review">
+               <p>“ Design with heart, create with soul. Every pixel tells a story. Your unique expression, simplicity's beauty. ”</p>
+               <div className="by">
+                  <img src={kevin} height="50" width="50" />
+                  <span>
+                     <h1>Kevin Dermot</h1>
+                     <p>Creator</p>
+                  </span>
+               </div>
+            </div>
+         </Fade>
+
 
          <div ref={loaders} className="loaders-example">
             <div className="section-header">
