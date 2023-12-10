@@ -18,6 +18,8 @@ import { FaPlayCircle } from "react-icons/fa";
 import { CgTemplate } from "react-icons/cg";
 import { MdOutlineInvertColors } from "react-icons/md";
 import kevin from "../images/kevin.jpg"
+import chris from "../images/chris.jpeg"
+import nick from "../images/nick.jpeg"
 
 
 
@@ -72,13 +74,22 @@ function Home() {
                         <span><BsGrid1X2Fill /> pre-made Ui Elements</span>
                         <h1>UI Elegance in a Snap</h1>
                         <p>Make your project look great with ready-made elements for a professional design that's quick and efficient.</p>
+                        <p className="links">
+                           <h5 onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Loaders</h5>
+                           <h5><FaLink />Buttons</h5>
+                           <h5><FaLink />Shadows</h5>
+                           and more.
+                        </p>
                      </div>
                   </Fade>
                   <Fade direction="right" triggerOnce>
                      <div className="sg-card c2">
                         <span><FaPlayCircle /> Play Perfect: Media Players</span>
                         <h1>Custom Players</h1>
-                        <p>Elevate user experience with our media players. Seamlessly integrate intuitive playback features for engaging and entertaining content.</p>
+                        <p>Enhance user experience with our media players, fully customizable for engaging and entertaining content delivery.</p>
+                        <p className="links">
+                           <h5><FaLink />Media players</h5>
+                        </p>
                      </div>
                   </Fade>
                   <Fade direction="left" triggerOnce>
@@ -86,6 +97,9 @@ function Home() {
                         <span><CgTemplate /> Website Templates</span>
                         <h1>Free Web Templates</h1>
                         <p>Launch your online presence with customizable website templates. From sleek portfolios to powerful business sites, create with style and ease.</p>
+                        <p className="links">
+                           <h5><FaLink />Web Templates</h5>
+                        </p>
                      </div>
                   </Fade>
                   <Fade direction="right" triggerOnce>
@@ -93,6 +107,9 @@ function Home() {
                         <span><MdOutlineInvertColors /> Color Palettes</span>
                         <h1>Palette Perfection: Inspiring Hues</h1>
                         <p> Infuse life into projects with our curated color palettes. Discover vibrant energy or soothing harmony to express your creativity</p>
+                        <p className="links">
+                           <h5><FaLink />Color Palettes</h5>
+                        </p>
                      </div>
                   </Fade>
 
@@ -101,7 +118,7 @@ function Home() {
          </div>
 
 
-         <Fade delay={300} duration={2000} triggerOnce>
+         <Fade delay={300} duration={1300} triggerOnce>
             <div className="review">
                <p>“ Design with heart, create with soul. Every pixel tells a story. Your unique expression, simplicity's beauty. ”</p>
                <div className="by">
@@ -169,53 +186,20 @@ function Home() {
             </Fade>
          </div>
 
-
-         {/* <div className="grid-container example-container">
-            <h1>Example</h1>
-            <div className="example">
-               <div className="e1">
-                  <div class="loader-1"></div>
-               </div>
-               <div className="e2">
-                  <div>
-                     <SyntaxHighlighter
-                        language="html"
-                        style={monokaiSublime}
-                        customStyle={{
-                           fontFamily: "consolas",
-                           width: "100%",
-                           fontSize: "14px",
-                           backgroundColor: "transparent"
-                        }}
-                     >
-                        {exampleLoaderHtml}
-                     </SyntaxHighlighter>
-
-                     <button className="copy-button" onClick={copyExampleHtml}>{exampleHtml ? <IoCheckmark className="copy-icon" /> : <TbCopy className="copy-icon" />}</button>
-                  </div>
-                  <div>
-                     <SyntaxHighlighter
-                        language="css"
-                        style={monokaiSublime}
-                        customStyle={{
-                           fontFamily: "consolas",
-                           width: "100%",
-                           fontSize: "14px",
-                           backgroundColor: "transparent",
-                           maxHeight: "300px",
-                           overflowY: "scroll",
-                           paddingBottom: "100px"
-                        }}
-                        className="exampleLoaderCss"
-                     >
-                        {exampleLoaderCss}
-                     </SyntaxHighlighter>
-
-                     <button className="copy-button" onClick={copyExampleCss}>{exampleCss ? <IoCheckmark className="copy-icon" /> : <TbCopy className="copy-icon" />}</button>
-                  </div>
+         <Fade delay={300} duration={1300} triggerOnce>
+            <div className="review">
+               <p>“ Qik: Where creativity meets efficiency. Empowering creators to bring ideas to life effortlessly, one pixel at a time. ”</p>
+               <div className="by">
+                  <img src={chris} height="50" width="50" />
+                  <span>
+                     <h1>Gisa Chris</h1>
+                     <p>Creator</p>
+                  </span>
                </div>
             </div>
-         </div> */}
+         </Fade>
+
+
 
       </div>
    )

@@ -125,7 +125,6 @@ header {
 }
 
 .logo h1 {
-    /* font-family:  "Prompt", sans-serif; */
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -483,7 +482,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 5px;
 }
 
 .sh-title .identifier{
@@ -494,12 +493,8 @@ header {
     font-size: 18px;
     transition: .2s;
     border-radius: 5px;
-    padding: 3px;
 }
 
-.sh-title .identifier:hover{
-    background-color: #cccee941;
-}
 
 .section-header h1 {
     font-family: 'Open Sans', sans-serif;
@@ -1144,6 +1139,29 @@ header {
     color: var(--text-color);
 }
 
+.showroom-grid .sg-card .links{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 15px;
+}
+
+.links h5{
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 15px;
+}
+
+.links h5:hover{
+    opacity: .6;
+}
+
 .showroom-grid .sg-card span svg{
     font-size: 20px;
 }
@@ -1155,10 +1173,10 @@ header {
     flex-direction: column;
     padding: 50px 0;
     gap: 15px;
+    font-family: 'Hedvig Letters Serif', serif;
 }
 
 .review p{
-    font-family: 'Hedvig Letters Serif', serif;
     font-size: 18px;
     width: 100%;
     text-align: center;
@@ -1174,9 +1192,7 @@ header {
 }
 
 .review h1{
-    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    font-weight: 600;
     text-align: left;
     color: var(--text-color);
 }
