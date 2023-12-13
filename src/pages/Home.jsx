@@ -208,35 +208,35 @@ function Home() {
             </div>
             <Fade triggerOnce direction="up" duration={1200}>
                <div className="grid-2">
-                  <div className="grid-2-element">
-                     
+                  <div className="grid-2-element b1">
+                     <button>Click Me</button>
                   </div>
-                  <div className="grid-2-element">
-                     
+                  <div className="grid-2-element b2">
+                     <button>Hover Me</button>
                   </div>
-                  <div className="grid-2-element">
-                     
+                  <div className="grid-2-element b3">
+                     <button>Hover Me</button>
                   </div>
-                  <div className="grid-2-element">
-                     
+                  <div className="grid-2-element b4">
+                     <button>Hover Me</button>
                   </div>
-                  <div className="grid-2-element">
-                     
+                  <div className="grid-2-element b5">
+                     <button>Hover Me</button>
                   </div>
-                  <div className="grid-2-element">
-                     
+                  <div className="grid-2-element b6">
+                     <button>Hover Me</button>
                   </div>
-                  <div className="grid-2-element">
-                     
+                  <div className="grid-2-element b7">
+                     <button>Hover Me</button>
                   </div>
-                  <div className="grid-2-element">
-                     
+                  <div className="grid-2-element b8">
+                     <button>Hover Me</button>
                   </div>
-                  <div className="grid-2-element">
-                     
+                  <div className="grid-2-element b9">
+                     <button>Hover Me</button>
                   </div>
-                  <div className="grid-2-element">
-                     
+                  <div className="grid-2-element b10">
+                     <button>Hover Me</button>
                   </div>
                </div>
             </Fade>

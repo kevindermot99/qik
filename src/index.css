@@ -231,12 +231,12 @@ header {
     color: var(--main-color);
 }
 
-.scrollToTop{
+.scrollToTop {
     background-color: var(--header-color);
     box-shadow: unset;
 }
 
-.scrollToTop svg{
+.scrollToTop svg {
     fill: var(--main-color);
 }
 
@@ -485,7 +485,7 @@ header {
     gap: 5px;
 }
 
-.sh-title .identifier{
+.sh-title .identifier {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -937,9 +937,9 @@ header {
     border-radius: calc(var(--stroke) / 2);
     overflow: hidden;
     transform: translate3d(0, 0, 0);
-  }
+}
 
-  .container7::before {
+.container7::before {
     content: '';
     position: absolute;
     top: 0;
@@ -948,9 +948,9 @@ header {
     width: 100%;
     background-color: var(--element-bg);
     transition: background-color 0.3s ease;
-  }
+}
 
-  .container7::after {
+.container7::after {
     content: '';
     height: 100%;
     width: 100%;
@@ -959,18 +959,19 @@ header {
     transform: translateX(-100%);
     background-color: var(--color);
     transition: background-color 0.3s ease;
-  }
+}
 
-  @keyframes zoom {
+@keyframes zoom {
     0% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-    100% {
-      transform: translateX(100%);
-    }
-  }
 
-  .container8 {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.container8 {
     width: 40px;
     height: 40px;
     border: 5px solid var(--element-bg);
@@ -979,9 +980,10 @@ header {
     position: relative;
     box-sizing: border-box;
     animation: rotation8 1s linear infinite;
-  } 
-  .container8::after {
-    content: '';  
+}
+
+.container8::after {
+    content: '';
     box-sizing: border-box;
     position: absolute;
     left: 50%;
@@ -992,25 +994,29 @@ header {
     border-radius: 50%;
     border: 3px solid transparent;
     border-bottom-color: var(--main-color);
-  }
-  
-  @keyframes rotation8 {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  } 
+}
 
-  .container9, .container9:before, .container9:after {
+@keyframes rotation8 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container9,
+.container9:before,
+.container9:after {
     border-radius: 50%;
     width: 2.5em;
     height: 2.5em;
     animation-fill-mode: both;
     animation: dotFadeInOut 1.8s infinite ease-in-out;
-  }
-  .container9 {
+}
+
+.container9 {
     color: var(--main-color);
     font-size: 6px;
     position: relative;
@@ -1018,34 +1024,48 @@ header {
     transform: translateZ(0);
     animation-delay: -0.16s;
     transform: translateY(-13px);
-  }
-  .container9:before,
-  .container9:after {
+}
+
+.container9:before,
+.container9:after {
     content: '';
     position: absolute;
     top: 0;
-  }
-  .container9:before {
+}
+
+.container9:before {
     left: -3.5em;
     animation-delay: -0.32s;
-  }
-  .container9:after {
-    left: 3.5em;
-  }
-  
-  @keyframes dotFadeInOut {
-    0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em; opacity: .8;  }
-    40% { box-shadow: 0 2.5em 0 0; opacity: 1; }
-  }
+}
 
-  .container10 {
+.container9:after {
+    left: 3.5em;
+}
+
+@keyframes dotFadeInOut {
+
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+        opacity: .8;
+    }
+
+    40% {
+        box-shadow: 0 2.5em 0 0;
+        opacity: 1;
+    }
+}
+
+.container10 {
     position: relative;
     width: 40px;
     height: 40px;
-  }
-  .container10:before,
-  .container10:after {
-    content:"";
+}
+
+.container10:before,
+.container10:after {
+    content: "";
     display: block;
     border: 20px solid transparent;
     border-top-color: var(--element-bg);
@@ -1054,26 +1074,39 @@ header {
     top: 0;
     animation: weld-rotate 2s infinite ease-in;
     border-radius: 50px;
-  }
-  .container10:before {
-    border-color: transparent  transparent transparent var(--main-color);
+}
+
+.container10:before {
+    border-color: transparent transparent transparent var(--main-color);
     animation-delay: 0.5s;
-  }
-  @keyframes weld-rotate {
-    0% , 25% {transform: rotate(0deg)}
-    50% , 75% {transform: rotate(180deg)}
-    100% {transform: rotate(360deg)}
-  }
+}
+
+@keyframes weld-rotate {
+
+    0%,
+    25% {
+        transform: rotate(0deg)
+    }
+
+    50%,
+    75% {
+        transform: rotate(180deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
 
 
-  .showroom{
+.showroom {
     width: 100%;
     height: fit-content;
     padding: 30px;
     scroll-margin: 60px;
 }
 
-.showroom-grid{
+.showroom-grid {
     width: 100%;
     height: fit-content;
     max-width: 1100px;
@@ -1086,7 +1119,7 @@ header {
     overflow: hidden;
 }
 
-.showroom-grid .sg-card{
+.showroom-grid .sg-card {
     height: fit-content;
     min-height: 100%;
     background-color: var(--item-hover-color);
@@ -1101,23 +1134,23 @@ header {
     overflow: hidden;
 }
 
-.showroom-grid .sg-card.c1 span{
+.showroom-grid .sg-card.c1 span {
     color: mediumorchid;
 }
 
-.showroom-grid .sg-card.c2 span{
+.showroom-grid .sg-card.c2 span {
     color: mediumblue;
 }
 
-.showroom-grid .sg-card.c3 span{
+.showroom-grid .sg-card.c3 span {
     color: darkcyan;
 }
 
-.showroom-grid .sg-card.c4 span{
+.showroom-grid .sg-card.c4 span {
     color: seagreen;
 }
 
-.showroom-grid .sg-card span{
+.showroom-grid .sg-card span {
     font-size: 15px;
     display: flex;
     justify-content: center;
@@ -1127,19 +1160,19 @@ header {
     text-align: left;
 }
 
-.showroom-grid .sg-card h1{
+.showroom-grid .sg-card h1 {
     font-size: 20px;
     text-align: left;
     color: var(--text-color);
 }
 
-.showroom-grid .sg-card p{
+.showroom-grid .sg-card p {
     font-size: 15px;
     text-align: left;
     color: var(--text-color);
 }
 
-.showroom-grid .sg-card .links{
+.showroom-grid .sg-card .links {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -1147,7 +1180,7 @@ header {
     font-size: 15px;
 }
 
-.links h5{
+.links h5 {
     color: var(--main-color);
     display: flex;
     justify-content: center;
@@ -1158,15 +1191,15 @@ header {
     font-size: 15px;
 }
 
-.links h5:hover{
+.links h5:hover {
     opacity: .6;
 }
 
-.showroom-grid .sg-card span svg{
+.showroom-grid .sg-card span svg {
     font-size: 20px;
 }
 
-.review{
+.review {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1176,7 +1209,7 @@ header {
     font-family: 'Hedvig Letters Serif', serif;
 }
 
-.review p{
+.review p {
     font-size: 18px;
     width: 100%;
     text-align: center;
@@ -1184,51 +1217,175 @@ header {
     color: var(--text-color);
 }
 
-.review .by{
+.review .by {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-.review h1{
+.review h1 {
     font-size: 16px;
     text-align: left;
     color: var(--text-color);
 }
 
-.review .by p{
+.review .by p {
     text-align: left;
     font-size: 14px;
     color: var(--main-color);
 }
 
-.review img{
+.review img {
     border-radius: 50%;
 }
 
+.grid-2 {
+    width: 100%;
+    height: fit-content;
+    max-width: 1100px;
+    margin: auto;
+    /* background-color: cadetblue; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-2-element {
+    /* background-color: var(--body-color); */
+    /* color: #fff; */
+    height: 150px;
+    text-align: center;
+    border-radius: 8px;
+    transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-2-element button {
+    text-transform: capitalize;
+    height: 45px;
+    width: 100%;
+    max-width: 150px;
+    transition: .2s;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-2-element.b1 button {
+    align-items: center;
+    appearance: button;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    text-transform: none;
+    transition: color .13s ease-in-out, background .13s ease-in-out, opacity .13s ease-in-out, box-shadow .13s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;   
+}
+
+.grid-2-element.b1 button:active {
+    background-color: #006AE8;
+}
+
+.grid-2-element.b1 button:hover {
+    background-color: #1C84FF;
+}
 
 
+.grid-2-element.b2 button {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    user-select: none;
+    -webkit-user-select: none;
+}
 
 
+.grid-2-element.b2 button:hover {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
 
+
+.grid-2-element.b3 button {
+  background-color: transparent;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.grid-2-element.b3 button:hover,
+.grid-2-element.b3 button:active {
+  outline: 0;
+}
+
+.grid-2-element.b3 button:hover {
+  background-color: transparent;
+  cursor: pointer;
+  border-color: var(--main-color);
+}
+
+.grid-2-element.b3 button:before {
+  background-color: #6279d6;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: -7px;
+  top: -7px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+  transition: .2s;
+}
+
+.grid-2-element.b3 button:hover:before {
+  background-color: var(--main-color);
+  right: 0px;
+  top: 0px
+}
 
 
 /* Footer */
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     color: var(--text-color-low-opacity);
-    font-size: 13px;
+    font-size: 12px;
     position: relative;
     overflow: hidden;
     max-width: 1400px;
     margin: auto;
+    text-transform: capitalize;
 }
 
-.footer::after{
+.footer::after {
     content: "";
     width: 95%;
     height: 1px;
