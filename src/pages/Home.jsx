@@ -66,52 +66,48 @@ function Home() {
          </div>
 
          <div className="showroom">
+            <div className="bubbles">
+               <span className="bubble1"></span>
+               <span className="bubble2"></span>
+            </div>
             <div className="section-header">
-               <Fade triggerOnce><h1>Provided For you !</h1></Fade>
+               <h1>Provided For you !</h1>
                <div className="showroom-grid">
-                  <Fade direction="left" triggerOnce>
-                     <div className="sg-card c1">
-                        <span><BsGrid1X2Fill /> pre-made Ui Elements</span>
-                        <h1>UI Elegance in a Snap</h1>
-                        <p>Make your project look great with ready-made elements for a professional design that's quick and efficient.</p>
-                        <p className="links">
-                           <h5 onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Loaders</h5>
-                           <h5 onClick={() => buttons.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Buttons</h5>
-                           <h5 onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Shadows</h5>
-                           and more.
-                        </p>
-                     </div>
-                  </Fade>
-                  <Fade direction="right" triggerOnce>
-                     <div className="sg-card c2">
-                        <span><FaPlayCircle /> Play Perfect: Media Players</span>
-                        <h1>Custom Players</h1>
-                        <p>Enhance user experience with our media players, fully customizable for engaging and entertaining content delivery.</p>
-                        <p className="links">
-                           <h5><FaLink />Media players</h5>
-                        </p>
-                     </div>
-                  </Fade>
-                  <Fade direction="left" triggerOnce>
-                     <div className="sg-card c3">
-                        <span><CgTemplate /> Website Templates</span>
-                        <h1>Free Web Templates</h1>
-                        <p>Launch your online presence with customizable website templates. From sleek portfolios to powerful business sites, create with style and ease.</p>
-                        <p className="links">
-                           <h5><FaLink />Web Templates</h5>
-                        </p>
-                     </div>
-                  </Fade>
-                  <Fade direction="right" triggerOnce>
-                     <div className="sg-card c4">
-                        <span><MdOutlineInvertColors /> Color Palettes</span>
-                        <h1>Palette Perfection: Inspiring Hues</h1>
-                        <p> Infuse life into projects with our curated color palettes. Discover vibrant energy or soothing harmony to express your creativity</p>
-                        <p className="links">
-                           <h5><FaLink />Color Palettes</h5>
-                        </p>
-                     </div>
-                  </Fade>
+                  <div className="sg-card c1">
+                     <span><BsGrid1X2Fill /> pre-made Ui Elements</span>
+                     <h1>UI Elegance in a Snap</h1>
+                     <p>Make your project look great with ready-made elements for a professional design that's quick and efficient.</p>
+                     <p className="links">
+                        <h5 onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Loaders</h5>
+                        <h5 onClick={() => buttons.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Buttons</h5>
+                        <h5 onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Shadows</h5>
+                        and more.
+                     </p>
+                  </div>
+                  <div className="sg-card c2">
+                     <span><FaPlayCircle /> Play Perfect: Media Players</span>
+                     <h1>Custom Players</h1>
+                     <p>Enhance user experience with our media players, fully customizable for engaging and entertaining content delivery.</p>
+                     <p className="links">
+                        <h5><FaLink />Media players</h5>
+                     </p>
+                  </div>
+                  <div className="sg-card c3">
+                     <span><CgTemplate /> Website Templates</span>
+                     <h1>Free Web Templates</h1>
+                     <p>Launch your online presence with customizable website templates. From sleek portfolios to powerful business sites, create with style and ease.</p>
+                     <p className="links">
+                        <h5><FaLink />Web Templates</h5>
+                     </p>
+                  </div>
+                  <div className="sg-card c4">
+                     <span><MdOutlineInvertColors /> Color Palettes</span>
+                     <h1>Palette Perfection: Inspiring Hues</h1>
+                     <p> Infuse life into projects with our curated color palettes. Discover vibrant energy or soothing harmony to express your creativity</p>
+                     <p className="links">
+                        <h5><FaLink />Color Palettes</h5>
+                     </p>
+                  </div>
 
                </div>
             </div>
@@ -120,7 +116,7 @@ function Home() {
          {/* Quote kevin */}
          <Fade delay={300} duration={1300} triggerOnce>
             <div className="review">
-               <p>“ Design with heart, create with soul. Every pixel tells a story. Your unique expression, simplicity's beauty. ”</p>
+               <p>“ Proudly one of the best Projects so far, want an instant modern look in your projects? QiK will make it quik. ”</p>
                <div className="by">
                   <img src={kevin} height="50" width="50" />
                   <span>
@@ -266,34 +262,34 @@ function Home() {
             <Fade triggerOnce direction="up" duration={1200}>
                <div className="grid-2">
                   <div className="grid-2-element">
-                     
+
                   </div>
                   <div className="grid-2-element">
-                     
+
                   </div>
                   <div className="grid-2-element">
-                     
+
                   </div>
                   <div className="grid-2-element">
-                     
+
                   </div>
                   <div className="grid-2-element">
-                     
+
                   </div>
                   <div className="grid-2-element">
-                     
+
                   </div>
                   <div className="grid-2-element">
-                     
+
                   </div>
                   <div className="grid-2-element">
-                     
+
                   </div>
                   <div className="grid-2-element">
-                     
+
                   </div>
                   <div className="grid-2-element">
-                     
+
                   </div>
                </div>
             </Fade>
