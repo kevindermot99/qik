@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
 import Footer from "./components/Footer"
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 function App() {
@@ -30,12 +30,20 @@ function App() {
           localStorage.setItem('ChoosenTheme', "light");
         }
       })
-
-
   }, []);
 
+  // Loader
+  const [loading, setLoading] = useState(true);
+  const Spinner = document.getElementById("loader-overlay");
+  if (Spinner) {
+    setTimeout(() => {
+      Spinner.classList.add("loader-overlay-hidden");
+      setLoading(false);
+    }, 1000);
+  }
 
   return (
+    !loading && (
     <>
 
       <Router>
@@ -48,7 +56,8 @@ function App() {
         </div>
       </Router>
 
-    </>
+      </>
+    )
   );
 }
 

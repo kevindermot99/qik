@@ -114,7 +114,7 @@ function Home() {
          </div>
 
          {/* Quote kevin */}
-         <Fade delay={300} duration={1300} triggerOnce>
+         <Fade delay={100} triggerOnce>
             <div className="review">
                <p>“ Proudly one of the best Projects so far, want an instant modern look in your projects? QiK will make it quik. ”</p>
                <div className="by">
@@ -182,7 +182,7 @@ function Home() {
          </div>
 
          {/* Quote chris */}
-         <Fade delay={300} duration={1300} triggerOnce>
+         <Fade delay={100} triggerOnce>
             <div className="review">
                <p>“ Qik: Where creativity meets efficiency. Empowering creators to bring ideas to life effortlessly, one pixel at a time. ”</p>
                <div className="by">
@@ -205,7 +205,7 @@ function Home() {
             <Fade triggerOnce direction="up" duration={1200}>
                <div className="grid-2">
                   <div className="grid-2-element b1">
-                     <button>Click Me</button>
+                     <button>Hover Me</button>
                   </div>
                   <div className="grid-2-element b2">
                      <button>Hover Me</button>
@@ -239,7 +239,7 @@ function Home() {
          </div>
 
          {/* Quote nickson */}
-         <Fade delay={300} duration={1300} triggerOnce>
+         <Fade delay={100} triggerOnce>
             <div className="review">
                <p>“ Ideas come to life with a click. Simple and innovative, created just for you! ”</p>
                <div className="by">

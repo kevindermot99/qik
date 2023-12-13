@@ -90,7 +90,7 @@ function Header() {
                                     <Link to="/" className="link">Checkboxes</Link>
                                     <Link to="/" className="link">Footers</Link>
                                     <Link to="/" className="link">Forms</Link>
-                                    <Link to="/" className="link">Loading Spinners</Link>
+                                    <Link to="/" className="link">Loaders</Link>
                                     <Link to="/" className="link">Menu</Link>
                                     <Link to="/" className="link">Media Players</Link>
                                     <Link to="/" className="link">Navigation Bars</Link>
