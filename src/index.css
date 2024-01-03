@@ -30,7 +30,7 @@ body {
     --copy-icon-color: #eee;
     --wave-color: #eee;
     --dropdown-bg-color: #ffffff;
-    --dropdown-item-color: #ecececcb;
+    --dropdown-item-color: #ececec85;
     --header-color: #ffffffd2;
     --element-bg: #b6cdff8e;
     --card-bg: #fff;    
@@ -40,23 +40,23 @@ body {
 body.dark {
     /* Dark Colors */
     /* --body-color: #1f2a31e1; */
-    --body-color: #111218;
+    --body-color: #0b0c0f;
     --text-color: #eee;
     --text-color-low-opacity: #c7c7c7;
     --border-lines: #7a779227;
     --scroll-thumb: #6d6d6d81;
     --shadow-color: #38383859;
     --item-bg-color: #1715276b;
-    --item-hover-color: #16181f;
+    --item-hover-color: #16181f44;
     --menu-color: #3d4147;
     --text-editor-color: #1715276b;
     --copy-button-bg: #323341;
-    --header-color: #111218b4;
-    --dropdown-bg-color: #111218;
-    --dropdown-item-color: #191a22;
+    --header-color: #0b0c0fb6;
+    --dropdown-bg-color: #0d0e13;
+    --dropdown-item-color: #14151b86;
     --element-bg: #2e3342;
-    --card-bg: #1b1d25;    
-    --element-contaniner-bg: #1b1d25;
+    --card-bg: #17181f5d;    
+    --element-contaniner-bg: #1b1d256c;
 }
 
 .container {
@@ -230,12 +230,14 @@ header {
     cursor: pointer;
     color: var(--text-color);
     position: relative;
-    padding: 0 11px 0 12px;
+    padding: 0 15px;
     border-radius: 8px;
     height: 38px;
 }
 
-
+body.dark .mega-menu ul li{
+    font-weight: lighter;
+}
 
 .mega-menu ul li sup {
     align-self: flex-start;
@@ -262,9 +264,9 @@ header {
     gap: 0px; */
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 8px;
+    grid-gap: 10px;
     width: fit-content;
-    background-color: var(--dropdown-bg-color);
+    background-color: var(--body-color);
     z-index: 9;
     border: 1px solid var(--border-lines);
     padding: 15px;
@@ -305,9 +307,13 @@ header {
     background-color: var(--dropdown-item-color);
 }
 
+body.dark .dropdown .link{
+    font-weight: lighter;
+}
+
 .dropdown .link:hover {
     background-color: var(--item-hover-color);
-    color: var(--main-color);
+    /* color: var(--main-color); */
 }
 
 .scrollToTop {
@@ -616,9 +622,8 @@ header {
 }
 
 .grid-1-element:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
     cursor: pointer;
-    box-shadow: 0px 0px 50px 0px #2121251e;
 }
 
 .grid-container {
@@ -1370,9 +1375,8 @@ header {
 }
 
 .grid-2-element:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
     cursor: pointer;
-    box-shadow: 0px 0px 50px 0px #2121251e;
 }
 
 .grid-2-element button {
