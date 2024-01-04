@@ -26,6 +26,7 @@ import discord from "../images/discord.png"
 import todoist from "../images/todoist.png"
 import github from "../images/github.png"
 import spotify from "../images/spotify.png"
+import openAi from "../images/openAi.png"
 
 
 
@@ -77,11 +78,12 @@ function Home() {
                effortlessly bringing together some elements from popular platforms such as:
             </p>
             <span className="companye-logos">
-               <img src={netflix} alt="logo1" />
-               <img src={spotify} alt="logo2" />
-               <img src={discord} alt="logo3" />
-               <img src={todoist} alt="logo4" />
-               <img src={github} className="github" alt="logo5" />
+               <img src={netflix} alt="Netflix" title="Netflix" />
+               <img src={spotify} alt="Spotify" title="Spotify" />
+               <img src={discord} alt="Discord" title="Discord" />
+               <img src={todoist} alt="Todoist" title="Todoist" />
+               <img src={github} className="github" alt="Github" title="Github" />
+               <img src={openAi} alt="OpenAi" title="OpenAi" />
             </span>
          </div>
 
