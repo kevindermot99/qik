@@ -21,6 +21,12 @@ import kevin from "../images/kevin.jpg"
 import chris from "../images/chris.jpeg"
 import nick from "../images/nick.jpeg"
 
+import netflix from "../images/netflix.png"
+import discord from "../images/discord.png"
+import todoist from "../images/todoist.png"
+import github from "../images/github.png"
+import spotify from "../images/spotify.png"
+
 
 
 const customAnimation = keyframes`
@@ -49,7 +55,7 @@ function Home() {
 
 
    return (
-      <div className="home-container">
+      <div className="home-container"> 
 
          <div className="hero">
             <Reveal keyframes={customAnimation} triggerOnce duration={1200} delay={0} >
@@ -65,13 +71,27 @@ function Home() {
             </Reveal>
          </div>
 
+         <div className="companies">
+            <h1>professional Look</h1>
+            <p>Craft a pro-level web UI with QiK,
+               effortlessly bringing together some elements from popular platforms such as:
+            </p>
+            <span className="companye-logos">
+               <img src={netflix} alt="logo1" />
+               <img src={spotify} alt="logo2" />
+               <img src={discord} alt="logo3" />
+               <img src={todoist} alt="logo4" />
+               <img src={github} className="github" alt="logo5" />
+            </span>
+         </div>
+
          <div className="showroom">
             <div className="bubbles">
                <span className="bubble1"></span>
                <span className="bubble2"></span>
             </div>
             <div className="section-header">
-               <h1>Provided For you !</h1>
+               {/* <h1>Provided For you !</h1> */}
                <div className="showroom-grid">
                   <div className="sg-card c1">
                      <span><BsGrid1X2Fill /> pre-made Ui Elements</span>
@@ -134,7 +154,7 @@ function Home() {
                <p>empower you projects user experience with loading animations for smooth performance!</p>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
-            <Fade triggerOnce direction="up" duration={1200}>
+            <Fade triggerOnce  duration={700}>
                <div className="grid-1">
                   <div className="grid-1-element">
                      <svg class="container1" viewBox="0 0 40 40" height="40" width="40">
@@ -202,7 +222,7 @@ function Home() {
                <p>Boost your project's user experience using animated buttons for a seamless and engaging interface!</p>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
-            <Fade triggerOnce direction="up" duration={1200}>
+            <Fade triggerOnce  duration={700}>
                <div className="grid-2">
                   <div className="grid-2-element b1">
                      <button>Hover Me</button>
@@ -259,7 +279,7 @@ function Home() {
                <p>Elevate your project's experience with engaging dynamic shadows for a seamless interface!</p>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
-            <Fade triggerOnce direction="up" duration={1200}>
+            <Fade triggerOnce  duration={700}>
                <div className="grid-2">
                   <div className="grid-2-element">
 
@@ -295,6 +315,9 @@ function Home() {
             </Fade>
          </div>
 
+         <div >
+
+         </div>
 
       </div>
    )

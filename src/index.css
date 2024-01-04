@@ -4,6 +4,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
 }
 
 html {
@@ -13,6 +16,7 @@ html {
 
 body {
     padding: 0;
+
     background-color: var(--body-color);
     /* Light Colors */
     --main-color: #3977ff;
@@ -33,8 +37,8 @@ body {
     --dropdown-item-color: #ececec85;
     --header-color: #ffffffd2;
     --element-bg: #b6cdff8e;
-    --card-bg: #fff;    
-    --element-contaniner-bg: #fff;
+    --card-bg: #fffffff5;
+    --element-contaniner-bg: #fffffff5;
 }
 
 body.dark {
@@ -43,7 +47,7 @@ body.dark {
     --body-color: #0b0c0f;
     --text-color: #eee;
     --text-color-low-opacity: #c7c7c7;
-    --border-lines: #7a779227;
+    --border-lines: #49465e27;
     --scroll-thumb: #6d6d6d81;
     --shadow-color: #38383859;
     --item-bg-color: #1715276b;
@@ -55,7 +59,7 @@ body.dark {
     --dropdown-bg-color: #0d0e13;
     --dropdown-item-color: #14151b86;
     --element-bg: #2e3342;
-    --card-bg: #17181f5d;    
+    --card-bg: #17181f5d;
     --element-contaniner-bg: #1b1d256c;
 }
 
@@ -85,15 +89,15 @@ body#with-navbar .container {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .loader-overlay-hidden {
+}
+
+.loader-overlay-hidden {
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease-out;
-  }
-  
-  .loader-wrapper {
+}
+
+.loader-wrapper {
     position: sticky;
     top: 0px;
     right: 0px;
@@ -106,46 +110,46 @@ body#with-navbar .container {
     align-items: center;
     justify-content: center;
     gap: 3px;
-  }
-  
-  .loader-wrapper img {
+}
+
+.loader-wrapper img {
     height: 70px;
     width: 70px;
-  }
-  
-  
-  /* SPINNER */
-  
-  .loader {
-    width: 35px;
-    height: 35px;
-    border: 2px solid var(--border-lines);
-    border-bottom-color: var(--main-color);
+}
+
+
+/* SPINNER */
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--border-lines);
+    border-bottom-color: var(--text-color);
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
     animation: rotation-loader .7s linear infinite;
-  }
-  
-  
-  
-  @keyframes rotation-loader {
+}
+
+
+
+@keyframes rotation-loader {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
+}
+
 
 
 
 header {
     width: 100%;
     height: fit-content;
-    padding: 10px 60px;
+    padding: 8px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -198,15 +202,16 @@ header {
 
 .logo img {
     width: 30px;
+    display: none;
 }
 
 .logo h1 {
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-family: 'Archivo Black', sans-serif;
     color: var(--text-color);
     /* background-color: cadetblue; */
-    display: none;
+    /* display: none; */
 }
 
 .mega-menu {
@@ -235,7 +240,7 @@ header {
     height: 38px;
 }
 
-body.dark .mega-menu ul li{
+body.dark .mega-menu ul li {
     font-weight: lighter;
 }
 
@@ -279,6 +284,7 @@ body.dark .mega-menu ul li{
     visibility: hidden;
     max-height: 83vh;
     overflow-y: auto;
+    cursor: default;
 }
 
 .mega-menu ul li:hover .dropdown {
@@ -304,10 +310,11 @@ body.dark .mega-menu ul li{
     white-space: nowrap;
     min-width: 200px;
     width: fit-content;
+    cursor: pointer;
     background-color: var(--dropdown-item-color);
 }
 
-body.dark .dropdown .link{
+body.dark .dropdown .link {
     font-weight: lighter;
 }
 
@@ -350,7 +357,7 @@ body.dark .dropdown .link{
     color: var(--text-color);
 }
 
-.ri-btn svg{
+.ri-btn svg {
     transition: .2s;
 }
 
@@ -362,25 +369,26 @@ body.dark .dropdown .link{
 .ri-btn::after {
     content: "Click to switch";
     color: var(--text-color-low-opacity);
-    background-color: var(--body-color);
-    border: 1px solid var(--border-lines);
+    background-color: var(--card-bg);
+    box-shadow: #00000018 0px 1px 10px -2px;
+    /* border: 1px solid var(--border-lines); */
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 7px 13px;
     font-size: 12px;
     font-weight: bold;
     position: absolute;
-    top: 110%;
+    top: 140%;
     transition: .2s;
     opacity: 0;
     visibility: hidden;
     width: fit-content;
     white-space: nowrap;
+    pointer-events: none;
 }
 
 .ri-btn:hover::after {
     opacity: 1;
     visibility: visible;
-    top: 120%;
 }
 
 .creators {
@@ -518,6 +526,54 @@ body.dark .dropdown .link{
     padding-top: 2px;
 }
 
+.companies {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0;
+    min-height: 200px;
+    /* background-color: cadetblue; */
+}
+
+
+.companies h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+
+.companies p {
+    color: var(--text-color-low-opacity);
+    font-size: 17px;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.companye-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.companye-logos img {
+    width: 40px; /* Set a fixed width for the logo */
+    height: 40px; /* Maintain aspect ratio */
+    object-fit: contain; /* Keep the entire image visible within the fixed space */
+}
+
+.companye-logos img.github{
+    border-radius: 50%;
+}
 
 .elements-example {
     width: 100%;
@@ -1198,11 +1254,11 @@ body.dark .dropdown .link{
     position: absolute;
     top: 30%;
     left: 5%;
-    background-color: #70004b8f;
+    background-color: #6400838f;
     height: 40%;
     width: 40%;
     border-radius: 50%;
-    filter: blur(400px);
+    filter: blur(300px);
 }
 
 .bubbles .bubble2 {
@@ -1399,19 +1455,19 @@ body.dark .dropdown .link{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 30px 10px;
     color: var(--text-color-low-opacity);
-    font-size: 12px;
+    font-size: 13px;
     position: relative;
     overflow: hidden;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
     text-transform: capitalize;
 }
 
 .footer::after {
     content: "";
-    width: 95%;
+    width: 100%;
     height: 1px;
     background-color: var(--border-lines);
     position: absolute;
@@ -1419,7 +1475,7 @@ body.dark .dropdown .link{
     left: 0;
     right: 0;
     margin: auto;
-
+    opacity: .8;
 }
 
 

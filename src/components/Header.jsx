@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { CgMenuLeft } from "react-icons/cg";
 import { FaInfo } from "react-icons/fa";
 import Headroom from "react-headroom";
-import logo from "../images/logo.png"
 import { IoIosArrowDown } from "react-icons/io";
 import { PiSun } from "react-icons/pi";
 import { RiMoonClearLine } from "react-icons/ri";
@@ -74,8 +73,7 @@ function Header() {
             <header>
                 <div className="header-left">
                     <Link to="/" className="logo">
-                        <img src={logo} />
-                        <h1>QiK</h1>
+                        <h1>Q</h1>
                     </Link>
 
                     <div className="mega-menu">
