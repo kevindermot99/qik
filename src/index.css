@@ -582,9 +582,9 @@ body.dark .dropdown .link {
     height: fit-content;
     background-color: var(--body-color);
     padding: 30px;
-    padding-top: 50px;
-    scroll-margin: 60px;
+    scroll-margin: 30px;
     /* overflow: hidden; */
+    position: relative;
 }
 
 .elements-example.help{
@@ -715,11 +715,12 @@ body.dark .dropdown .link {
     height: 150px;
     text-align: center;
     border-radius: 8px;
-    transition: .2s;
+    /* transition: .2s; */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: 2px solid transparent;
 }
 
 
@@ -1412,7 +1413,7 @@ body.dark .dropdown .link {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding: 80px 0;
+    padding: 50px 0;
     gap: 15px;
     font-family: 'Hedvig Letters Serif', serif;
 }
@@ -1457,6 +1458,7 @@ body.dark .dropdown .link {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    position: relative;
 }
 
 .grid-2-element {
@@ -1465,11 +1467,12 @@ body.dark .dropdown .link {
     height: 150px;
     text-align: center;
     border-radius: 8px;
-    transition: .2s;
+    /* transition: .2s; */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: 2px solid transparent;
 }
 
 
@@ -1676,7 +1679,7 @@ body.dark .dropdown .link {
 
 
 .elements-example.shadows{
-    padding-bottom: 100px;
+    padding-bottom: 70px;
 }
 
 .elements-example.shadows .grid-2-element{
@@ -1687,38 +1690,65 @@ body.dark .dropdown .link {
     transform: unset;
 }
 
-.elements-example.shadows .grid-2-element:nth-child(1){
+.elements-example.shadows .grid-2-element.ch1{
     box-shadow: rgba(52, 54, 56, 0.2) 0px 8px 24px;
 }
-.elements-example.shadows .grid-2-element:nth-child(2){
+.elements-example.shadows .grid-2-element.ch2{
     box-shadow: rgba(49, 49, 54, 0.2) 0px 7px 29px 0px;
 }
-.elements-example.shadows .grid-2-element:nth-child(3){
+.elements-example.shadows .grid-2-element.ch3{
     box-shadow: rgba(0, 0, 0, 0.144) 0px 5px 15px;
 }
-.elements-example.shadows .grid-2-element:nth-child(4){
+.elements-example.shadows .grid-2-element.ch4{
     box-shadow: rgba(34, 32, 32, 0.26) 0px 2px 8px 0px;
 }
-.elements-example.shadows .grid-2-element:nth-child(5){
+.elements-example.shadows .grid-2-element.ch5{
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
-.elements-example.shadows .grid-2-element:nth-child(6){
+.elements-example.shadows .grid-2-element.ch6{
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
-.elements-example.shadows .grid-2-element:nth-child(7){
+.elements-example.shadows .grid-2-element.ch7{
     box-shadow: rgba(50, 50, 93, 0.158) 0px 13px 27px -5px, rgba(0, 0, 0, 0.192) 0px 8px 16px -8px;
 }
-.elements-example.shadows .grid-2-element:nth-child(8){
+.elements-example.shadows .grid-2-element.ch8{
     box-shadow: rgba(50, 50, 93, 0.116) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
-.elements-example.shadows .grid-2-element:nth-child(9){
+.elements-example.shadows .grid-2-element.ch9{
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
-.elements-example.shadows .grid-2-element:nth-child(10){
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.13) 0px 3px 6px;
+.elements-example.shadows .grid-2-element.ch10{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 10px 16px;
 }
 
+.only-in-light{
+    /* background-color: #1d1d1da9; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    backdrop-filter: blur(5px); 
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+}
 
+.only-in-light svg{
+    font-size: 25px;
+    padding-bottom: 3px;
+    color: orange;
+}
+
+body.dark .only-in-light{
+    opacity: 1;
+    visibility: visible;
+}
 
 
 

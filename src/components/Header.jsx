@@ -73,7 +73,7 @@ function Header() {
             <header>
                 <div className="header-left">
                     <Link to="/" className="logo">
-                        <h1>Q</h1>
+                        <h1>Qik</h1>
                     </Link>
 
                     <div className="mega-menu">

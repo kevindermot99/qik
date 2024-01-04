@@ -27,6 +27,7 @@ import todoist from "../images/todoist.png"
 import github from "../images/github.png"
 import spotify from "../images/spotify.png"
 import openAi from "../images/openAi.png"
+import { IoIosWarning } from "react-icons/io";
 
 
 
@@ -57,7 +58,7 @@ function Home() {
 
 
    return (
-      <div className="home-container"> 
+      <div className="home-container">
 
          <div className="hero">
             <Reveal keyframes={customAnimation} triggerOnce duration={1200} delay={0} >
@@ -71,6 +72,21 @@ function Home() {
                   Get Start For Free <FaArrowDownLong />
                </div>
             </Reveal>
+         </div>
+
+         <div className="companies">
+            <h1>professional Look</h1>
+            <p>Craft a pro-level web UI with QiK,
+               effortlessly bringing together some elements from popular platforms such as:
+            </p>
+            <span className="companye-logos">
+               <img src={netflix} alt="Netflix" title="Netflix" />
+               <img src={spotify} alt="Spotify" title="Spotify" />
+               <img src={discord} alt="Discord" title="Discord" />
+               <img src={todoist} alt="Todoist" title="Todoist" />
+               <img src={github} className="github" alt="Github" title="Github" />
+               <img src={openAi} alt="OpenAi" title="OpenAi" />
+            </span>
          </div>
 
          <div className="showroom">
@@ -121,21 +137,6 @@ function Home() {
             </div>
          </div>
 
-         <div className="companies">
-            <h1>professional Look</h1>
-            <p>Craft a pro-level web UI with QiK,
-               effortlessly bringing together some elements from popular platforms such as:
-            </p>
-            <span className="companye-logos">
-               <img src={netflix} alt="Netflix" title="Netflix" />
-               <img src={spotify} alt="Spotify" title="Spotify" />
-               <img src={discord} alt="Discord" title="Discord" />
-               <img src={todoist} alt="Todoist" title="Todoist" />
-               <img src={github} className="github" alt="Github" title="Github" />
-               <img src={openAi} alt="OpenAi" title="OpenAi" />
-            </span>
-         </div>
-
          {/* Quote kevin */}
          <Fade delay={100} triggerOnce>
             <div className="review">
@@ -157,7 +158,7 @@ function Home() {
                <p>empower you projects user experience with loading animations for smooth performance!</p>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
-            <Fade triggerOnce  duration={700}>
+            <Fade triggerOnce duration={700}>
                <div className="grid-1">
                   <div className="grid-1-element">
                      <svg class="container1" viewBox="0 0 40 40" height="40" width="40">
@@ -225,7 +226,7 @@ function Home() {
                <p>Boost your project's user experience using animated buttons for a seamless and engaging interface!</p>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
-            <Fade triggerOnce  duration={700}>
+            <Fade triggerOnce duration={700}>
                <div className="grid-2">
                   <div className="grid-2-element b1">
                      <button>Hover Me</button>
@@ -276,46 +277,49 @@ function Home() {
          </Fade>
 
          <div ref={shadows} className="elements-example shadows">
+
             <div className="section-header">
                <div className="sh-title"><p><span className="identifier" onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></span>Shadows</p></div>
                <h1>Enhance UX with Dynamic Shadows</h1>
                <p>Elevate your project's experience with engaging dynamic shadows for a seamless interface!</p>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
-            <Fade triggerOnce  duration={700}>
-               <div className="grid-2">
-                  <div className="grid-2-element">
+
+            <div className="grid-2">
+               <div className="only-in-light">
+                  <IoIosWarning /> visible in light mode only
+               </div>
+                  <div className="grid-2-element ch1">
                      #1
                   </div>
-                  <div className="grid-2-element">
+                  <div className="grid-2-element ch2">
                      #2
                   </div>
-                  <div className="grid-2-element">
+                  <div className="grid-2-element ch3">
                      #3
                   </div>
-                  <div className="grid-2-element">
+                  <div className="grid-2-element ch4">
                      #04
                   </div>
-                  <div className="grid-2-element">
+                  <div className="grid-2-element ch5">
                      #05
                   </div>
-                  <div className="grid-2-element">
+                  <div className="grid-2-element ch6">
                      #6
                   </div>
-                  <div className="grid-2-element">
+                  <div className="grid-2-element ch7">
                      #7
                   </div>
-                  <div className="grid-2-element">
+                  <div className="grid-2-element ch8">
                      #8
                   </div>
-                  <div className="grid-2-element">
+                  <div className="grid-2-element ch9">
                      #9
                   </div>
-                  <div className="grid-2-element">
+                  <div className="grid-2-element ch10">
                      #10
                   </div>
-               </div>
-            </Fade>
+            </div>
          </div>
 
          {/* <div className="elements-example help">
@@ -328,16 +332,13 @@ function Home() {
          </div> */}
 
          <div ref={templates} className="elements-example templates">
-            <div className="only-in-light">
-               
-            </div>
             <div className="section-header">
                <div className="sh-title"><p><span className="identifier" onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></span>Templates</p></div>
                <h1>Free Portfolio Templates</h1>
                <p>Get Creative with Our Free Portfolio Templates - Make Your Online Presence Shine!</p>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
-            <Fade triggerOnce  duration={700}>
+            <Fade triggerOnce duration={700}>
                <div className="grid-3">
                   <div className="grid-3-element">
 
