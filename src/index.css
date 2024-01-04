@@ -661,6 +661,7 @@ body.dark .dropdown .link {
     border-radius: 50px;
     color: var(--text-color) !important;
     padding: 5px 20px;
+    width: fit-content;
 }
 
 .sh-title .identifier {
@@ -679,8 +680,6 @@ body.dark .dropdown .link {
     font-family: 'Open Sans', sans-serif;
     font-size: 35px;
     font-weight: bold;
-    width: 100%;
-    max-width: 800px;
     text-align: center;
     color: var(--text-color);
 }
@@ -688,7 +687,6 @@ body.dark .dropdown .link {
 .section-header p {
     color: var(--text-color-low-opacity);
     font-size: 17px;
-    max-width: 600px;
     text-align: center;
 }
 
@@ -1774,10 +1772,63 @@ body.dark .only-in-light{
     .container::after {
         display: none;
     }
+    .mega-menu{
+        margin-left: unset;
+        position: absolute;
+        display: none;
+    }
+    .creators{
+        display: none;
+    }
+    header{
+        padding: 8px 20px;
+        width: unset;
+    }
+
+    .bubbles{
+        display: none;
+    }
+    .scroll-to-top{
+        display: none;
+    }
 
 }
 
-@media screen and (max-width: 700px) {}
+@media screen and (max-width: 700px) {
+    .companye-logos{
+        flex-wrap: wrap;
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .companies{
+        padding: unset;
+    }
+    
+    .showroom-grid{
+        display: block;
+    }
+
+    .showroom-grid .sg-card{
+        padding: 10px 0;
+    }
+
+    .showroom-grid .sg-card{
+        width: 100%;
+        min-height: unset;
+        height: fit-content;
+    }
+
+    .section-header p{
+        max-width: unset;
+        width: 100%;
+        display: block;
+    }
+
+    .showroom-grid .sg-card .links{
+        flex-wrap: wrap;
+    }
+}
 
 @media screen and (max-width: 500px) {
 
@@ -1807,7 +1858,7 @@ body.dark .only-in-light{
     }
 
     .hero h1 {
-        font-size: 30px;
+        font-size: 50px;
     }
 
     .scroll-down {
@@ -1815,6 +1866,14 @@ body.dark .only-in-light{
         width: 100%;
         min-width: 180px;
         padding: 0;
+    }
+
+    .hero{
+        height: 60vh;
+    }
+    
+    .showroom{
+        padding: 0 20px;
     }
 
 }
@@ -1825,7 +1884,11 @@ body.dark .only-in-light{
         width: 100%;
     }
 
+    
 
+    .hero h1 {
+        font-size: 30px;
+    }
 
     .menu-container .menu-logo i {
         display: block;
