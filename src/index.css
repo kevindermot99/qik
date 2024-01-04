@@ -60,7 +60,7 @@ body.dark {
     --dropdown-item-color: #14151b86;
     --element-bg: #2e3342;
     --card-bg: #17181f5d;
-    --element-contaniner-bg: #1b1d256c;
+    --element-contaniner-bg: #1b1d2548;
 }
 
 .container {
@@ -480,21 +480,23 @@ body.dark .dropdown .link {
 
 .scroll-down,
 .creators,
-.sh-title {
+.sh-title,
+.elements-example.help .section-header .sh-link {
     background-image: linear-gradient(150deg, var(--main-color) -50%, #aa41d4 100%);
 }
 
 
 .scroll-down:before,
 .creators:before,
-.sh-title:before {
+.sh-title:before,
+.elements-example.help .section-header .sh-link:before {
     content: '';
     position: absolute;
     width: 150px;
     height: 100%;
     background-image: linear-gradient(140deg,
             rgba(255, 255, 255, 0) 30%,
-            rgba(255, 255, 255, 0.74),
+            rgba(255, 255, 255, 0.788),
             rgba(255, 255, 255, 0) 70%);
     top: 0;
     left: -100px;
@@ -562,12 +564,12 @@ body.dark .dropdown .link {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 30px;
+    gap: 60px;
 }
 
 .companye-logos img {
-    width: 40px; /* Set a fixed width for the logo */
-    height: 40px; /* Maintain aspect ratio */
+    width: 50px; /* Set a fixed width for the logo */
+    height: 50px; /* Maintain aspect ratio */
     object-fit: contain; /* Keep the entire image visible within the fixed space */
 }
 
@@ -578,10 +580,42 @@ body.dark .dropdown .link {
 .elements-example {
     width: 100%;
     height: fit-content;
-    background-color: var(--item-hover-color);
+    background-color: var(--body-color);
     padding: 30px;
+    padding-top: 50px;
     scroll-margin: 60px;
     /* overflow: hidden; */
+}
+
+.elements-example.help{
+    background-color: var(--body-color);
+    width: 100%;
+    margin: auto;
+    padding: unset;
+    padding: 50px 20px;
+}
+
+.elements-example.help h1{
+    /* color: #fff; */
+    font-size: 25px;
+}
+
+
+.elements-example.help .section-header .sh-link{
+    margin: unset;
+    font-size: 13px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    padding: 0 20px;
+    border-radius: 8px;
+    height: 38px;
+    overflow: hidden;
 }
 
 .grid-1 {
@@ -606,18 +640,27 @@ body.dark .dropdown .link {
 }
 
 .section-header .sh-title {
-    color: white;
     text-transform: capitalize;
-    font-size: 16px;
-    font-weight: lighter;
     border-radius: 50px;
-    padding: 8px 20px;
     overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2px;
+}
+
+.sh-title p{
+    background-color: var(--body-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 5px;
+    font-size: 15px !important;
+    font-weight: lighter;
+    border-radius: 50px;
+    color: var(--text-color) !important;
+    padding: 5px 20px;
 }
 
 .sh-title .identifier {
@@ -628,6 +671,7 @@ body.dark .dropdown .link {
     font-size: 18px;
     transition: .2s;
     border-radius: 5px;
+    color: var(--main-color) !important;
 }
 
 
@@ -675,12 +719,9 @@ body.dark .dropdown .link {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.grid-1-element:hover {
-    transform: scale(1.15);
     cursor: pointer;
 }
+
 
 .grid-container {
     /* background-color: cadetblue; */
@@ -1428,12 +1469,9 @@ body.dark .dropdown .link {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.grid-2-element:hover {
-    transform: scale(1.15);
     cursor: pointer;
 }
+
 
 .grid-2-element button {
     text-transform: capitalize;
@@ -1637,7 +1675,48 @@ body.dark .dropdown .link {
 }
 
 
+.elements-example.shadows{
+    padding-bottom: 100px;
+}
 
+.elements-example.shadows .grid-2-element{
+    color: var(--text-color-low-opacity);
+}
+
+.elements-example.shadows .grid-2-element:hover{
+    transform: unset;
+}
+
+.elements-example.shadows .grid-2-element:nth-child(1){
+    box-shadow: rgba(52, 54, 56, 0.2) 0px 8px 24px;
+}
+.elements-example.shadows .grid-2-element:nth-child(2){
+    box-shadow: rgba(49, 49, 54, 0.2) 0px 7px 29px 0px;
+}
+.elements-example.shadows .grid-2-element:nth-child(3){
+    box-shadow: rgba(0, 0, 0, 0.144) 0px 5px 15px;
+}
+.elements-example.shadows .grid-2-element:nth-child(4){
+    box-shadow: rgba(34, 32, 32, 0.26) 0px 2px 8px 0px;
+}
+.elements-example.shadows .grid-2-element:nth-child(5){
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.elements-example.shadows .grid-2-element:nth-child(6){
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+.elements-example.shadows .grid-2-element:nth-child(7){
+    box-shadow: rgba(50, 50, 93, 0.158) 0px 13px 27px -5px, rgba(0, 0, 0, 0.192) 0px 8px 16px -8px;
+}
+.elements-example.shadows .grid-2-element:nth-child(8){
+    box-shadow: rgba(50, 50, 93, 0.116) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.elements-example.shadows .grid-2-element:nth-child(9){
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+.elements-example.shadows .grid-2-element:nth-child(10){
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.13) 0px 3px 6px;
+}
 
 
 
@@ -1728,7 +1807,7 @@ body.dark .dropdown .link {
 /* CUSTOM SCROLL */
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 14px;
 }
 
 ::-webkit-scrollbar-track {
@@ -1743,7 +1822,7 @@ body.dark::-webkit-scrollbar-track {
     border: 3px solid transparent;
     background-clip: padding-box;
     background: var(--scroll-thumb);
-    border-radius: 50px;
+    /* border-radius: 50px; */
 }
 
 /* SELECTION COLOR  */
