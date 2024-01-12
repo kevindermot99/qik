@@ -16,7 +16,6 @@ html {
 
 body {
     padding: 0;
-
     background-color: var(--body-color);
     /* Light Colors */
     --main-color: #3977ff;
@@ -51,11 +50,11 @@ body.dark {
     --scroll-thumb: #6d6d6d81;
     --shadow-color: #38383859;
     --item-bg-color: #1715276b;
-    --item-hover-color: #16181f44;
+    --item-hover-color: #16181f5e;
     --menu-color: #3d4147;
     --text-editor-color: #1715276b;
     --copy-button-bg: #323341;
-    --header-color: #0b0c0fb6;
+    --header-color: var(--body-color);
     --dropdown-bg-color: #0d0e13;
     --dropdown-item-color: #14151b86;
     --element-bg: #2e3342;
@@ -68,6 +67,10 @@ body.dark {
     background-color: var(--body-color);
     padding: 0px;
     font-family: 'Poppins', sans-serif;
+    /* overflow: hidden; */
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
 }
 
 body#with-navbar .container {
@@ -1702,16 +1705,16 @@ body.dark .dropdown .link {
     box-shadow: rgba(34, 32, 32, 0.26) 0px 2px 8px 0px;
 }
 .elements-example.shadows .grid-2-element.ch5{
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    box-shadow: rgba(15, 14, 17, 0.15) 0px 8px 50px 0px;
 }
 .elements-example.shadows .grid-2-element.ch6{
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 .elements-example.shadows .grid-2-element.ch7{
-    box-shadow: rgba(50, 50, 93, 0.158) 0px 13px 27px -5px, rgba(0, 0, 0, 0.192) 0px 8px 16px -8px;
+    box-shadow: rgba(14, 12, 12, 0.158) 0px 13px 27px -5px, rgba(0, 0, 0, 0.192) 0px 8px 16px -8px;
 }
 .elements-example.shadows .grid-2-element.ch8{
-    box-shadow: rgba(50, 50, 93, 0.116) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    box-shadow: rgba(35, 35, 37, 0.116) 0px 0px 20px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 .elements-example.shadows .grid-2-element.ch9{
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
@@ -1725,6 +1728,9 @@ body.dark .dropdown .link {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     width: 100%;
     height: 100%;
     display: flex;
@@ -1749,8 +1755,97 @@ body.dark .only-in-light{
     visibility: visible;
 }
 
+.grid-3{
+    width: 100%;
+    height: fit-content;
+    max-width: 1100px;
+    margin: auto;
+    /* background-color: cadetblue; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    position: relative;
+}
 
+.grid-3-element {
+    /* background-color: var(--element-contaniner-bg); */
+    /* color: #fff; */
+    min-height: 150px;
+    text-align: center;
+    border-radius: 8px;
+    /* transition: .2s; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: .2s;
+    position: relative;
+    overflow: hidden;
+}
 
+.grid-3-element::after{
+    content: "View Live >>";
+    width: 100%;
+    height: 50px;
+    background-color: var(--body-color);
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    right: 0;
+    bottom: -100%;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0s;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+body.dark .grid-3-element::after{
+    font-weight: 500;
+}
+
+.grid-3-element:hover{
+    opacity: .8;
+}
+
+.grid-3-element:hover::after{
+    bottom: 0;
+}
+
+.grid-3-element h1{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-align: left;
+}
+
+.grid-3-element p {
+    text-align: center;
+    color: var(--text-color-low-opacity);
+    max-width: 700px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.grid-3-element span{
+    padding: 8px;
+    background-color: var(--border-lines);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.grid-3-element span img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
 
 
 
@@ -1954,11 +2049,11 @@ body.dark::-webkit-scrollbar-track {
 
 /* SELECTION COLOR  */
 ::-moz-selection {
-    color: #000;
+    color: #ffffff;
     background: #a287eb8c;
 }
 
 ::selection {
-    color: #000;
+    color: #ffffff;
     background: #a287eb8c;
 }

@@ -27,6 +27,7 @@ import todoist from "../images/todoist.png"
 import github from "../images/github.png"
 import spotify from "../images/spotify.png"
 import openAi from "../images/openAi.png"
+import portfolio1 from "../images/portfolio1.png"
 import { IoIosWarning } from "react-icons/io";
 
 
@@ -34,12 +35,14 @@ import { IoIosWarning } from "react-icons/io";
 const customAnimation = keyframes`
   from {
     opacity: 0;
-    transform: translate3d(0, 70px, 0);
+    transform: translate3d(0, -10px, 0) scale(1.1);
+    filter: blur(10px);
   }
 
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0px);
   }
 `;
 
@@ -61,13 +64,13 @@ function Home() {
       <div className="home-container">
 
          <div className="hero">
-            <Reveal keyframes={customAnimation} triggerOnce duration={1200} delay={0} >
+            <Reveal keyframes={customAnimation} triggerOnce duration={500} delay={0} >
                <h1>Designing Tomorrow, Today.</h1>
             </Reveal>
-            <Reveal keyframes={customAnimation} triggerOnce duration={1200} delay={100}>
+            <Reveal keyframes={customAnimation} triggerOnce duration={700} delay={100}>
                <p>Your Free Web UI Inspiration, Unleash Creativity Without Limits.</p>
             </Reveal>
-            <Reveal keyframes={customAnimation} triggerOnce duration={1200} delay={200}>
+            <Reveal keyframes={customAnimation} triggerOnce duration={900} delay={200}>
                <div className="scroll-down" onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}>
                   Get Start For Free <FaArrowDownLong />
                </div>
@@ -289,36 +292,36 @@ function Home() {
                <div className="only-in-light">
                   <IoIosWarning /> visible in light mode only
                </div>
-                  <div className="grid-2-element ch1">
-                     #1
-                  </div>
-                  <div className="grid-2-element ch2">
-                     #2
-                  </div>
-                  <div className="grid-2-element ch3">
-                     #3
-                  </div>
-                  <div className="grid-2-element ch4">
-                     #04
-                  </div>
-                  <div className="grid-2-element ch5">
-                     #05
-                  </div>
-                  <div className="grid-2-element ch6">
-                     #6
-                  </div>
-                  <div className="grid-2-element ch7">
-                     #7
-                  </div>
-                  <div className="grid-2-element ch8">
-                     #8
-                  </div>
-                  <div className="grid-2-element ch9">
-                     #9
-                  </div>
-                  <div className="grid-2-element ch10">
-                     #10
-                  </div>
+               <div className="grid-2-element ch1">
+                  #1
+               </div>
+               <div className="grid-2-element ch2">
+                  #2
+               </div>
+               <div className="grid-2-element ch3">
+                  #3
+               </div>
+               <div className="grid-2-element ch4">
+                  #04
+               </div>
+               <div className="grid-2-element ch5">
+                  #05
+               </div>
+               <div className="grid-2-element ch6">
+                  #6
+               </div>
+               <div className="grid-2-element ch7">
+                  #7
+               </div>
+               <div className="grid-2-element ch8">
+                  #8
+               </div>
+               <div className="grid-2-element ch9">
+                  #9
+               </div>
+               <div className="grid-2-element ch10">
+                  #10
+               </div>
             </div>
          </div>
 
@@ -341,34 +344,25 @@ function Home() {
             <Fade triggerOnce duration={700}>
                <div className="grid-3">
                   <div className="grid-3-element">
-
+                     <h1>UX/UI Designer Portfolio</h1>
+                     <p>Feature your design projects and highlight your skills in UX and UI design.</p>
+                     <span>
+                        <img src={portfolio1} />
+                     </span>
                   </div>
                   <div className="grid-3-element">
-
+                     <h1>UX/UI Designer Portfolio</h1>
+                     <p>Feature your design projects and highlight your skills in UX and UI design.</p>
+                     <span>
+                        <img src={portfolio1} />
+                     </span>
                   </div>
                   <div className="grid-3-element">
-
-                  </div>
-                  <div className="grid-3-element">
-
-                  </div>
-                  <div className="grid-3-element">
-
-                  </div>
-                  <div className="grid-3-element">
-
-                  </div>
-                  <div className="grid-3-element">
-
-                  </div>
-                  <div className="grid-3-element">
-
-                  </div>
-                  <div className="grid-3-element">
-
-                  </div>
-                  <div className="grid-3-element">
-
+                     <h1>UX/UI Designer Portfolio</h1>
+                     <p>Feature your design projects and highlight your skills in UX and UI design.</p>
+                     <span>
+                        <img src={portfolio1} />
+                     </span>
                   </div>
                </div>
             </Fade>
