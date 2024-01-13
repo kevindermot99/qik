@@ -12,22 +12,36 @@ import { keyframes } from "@emotion/react";
 import { Fade } from "react-awesome-reveal";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+
+// icons
 import { FaLink } from "react-icons/fa6";
-import { BsGrid1X2Fill } from "react-icons/bs";
-import { FaPlayCircle } from "react-icons/fa";
+import { LuLoader } from "react-icons/lu";
+import { TbPlayerSkipForward } from "react-icons/tb";
 import { CgTemplate } from "react-icons/cg";
-import { MdOutlineInvertColors } from "react-icons/md";
+import { IoColorFillOutline } from "react-icons/io5";
+import { MdFormatShapes } from "react-icons/md";
+import { BsViewList } from "react-icons/bs";
+import { FaRegRectangleList } from "react-icons/fa6";
+import { IoMdCheckboxOutline } from "react-icons/io";
+import { PiSquareHalfBottomFill } from "react-icons/pi";
+import { BsFillMenuButtonWideFill } from "react-icons/bs";
+import { LuCheckCircle2 } from "react-icons/lu";
+import { TbInnerShadowRight } from "react-icons/tb";
+import { LiaTableSolid } from "react-icons/lia";
+import { TbRowInsertTop } from "react-icons/tb";
+
+
+
 import kevin from "../images/kevin.jpg"
 import chris from "../images/chris.jpeg"
 import nick from "../images/nick.jpeg"
 
-import netflix from "../images/netflix.png"
-import discord from "../images/discord.png"
-import todoist from "../images/todoist.png"
-import github from "../images/github.png"
-import spotify from "../images/spotify.png"
-import openAi from "../images/openAi.png"
-import portfolio1 from "../images/portfolio1.png"
+import { ReactComponent as Discord } from "../images/icons8-discord.svg"
+import { ReactComponent as Todoist } from "../images/icons8-todoist.svg"
+import { ReactComponent as Github  }from "../images/icons8-github.svg"
+import { ReactComponent as Spotify } from "../images/icons8-spotify.svg"
+import { ReactComponent as Youtube } from "../images/icons8-youtube.svg"
+import OpenAi from "../images/icons8-chatgpt.svg"
 import videoPromo from "../images/videoPromo.mp4"
 import { IoIosWarning } from "react-icons/io";
 import CountUp from 'react-countup';
@@ -71,11 +85,11 @@ function Home() {
                <h1>Designing Tomorrow, Today.</h1>
             </Reveal>
             <Reveal keyframes={customAnimation} triggerOnce duration={700} delay={100}>
-               <p>Your Free Web UI Inspiration, Unleash Creativity Without Limits.</p>
+               <p>Your Web UI Inspiration, Unleash Creativity Without Limits.</p>
             </Reveal>
             <Reveal keyframes={customAnimation} triggerOnce duration={900} delay={200}>
                <div className="scroll-down" onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}>
-                  Take a qik look
+                  Let's Take a qik look
                </div>
             </Reveal>
          </div>
@@ -86,12 +100,11 @@ function Home() {
                effortlessly bringing together some elements from popular platforms such as:
             </p>
             <span className="companye-logos">
-               {/* <img src={netflix} alt="Netflix" title="Netflix" /> */}
-               <img src={spotify} alt="Spotify" title="Spotify" />
-               <img src={discord} alt="Discord" title="Discord" />
-               <img src={todoist} alt="Todoist" title="Todoist" />
-               <img src={github} className="github" alt="Github" title="Github" />
-               <img src={openAi} alt="OpenAi" title="OpenAi" />
+               <a href="https://open.spotify.com/" target="_blank"><Spotify className="cl-svg" /></a>
+               <a href="https://todoist.com/" target="_blank"><Todoist className="cl-svg" /></a>
+               <a href="https://github.com/" target="_blank"><Github className="cl-svg" /></a>
+               <a href="https://discord.com/" target="_blank"><Discord className="cl-svg" /></a>
+               <a href="https://youtube.com/" target="_blank"><Youtube className="cl-svg" /></a>
             </span>
          </div>
 
@@ -103,42 +116,49 @@ function Home() {
             <div className="section-header">
                {/* <h1>Provided For you !</h1> */}
                <div className="showroom-grid">
-                  <div className="sg-card c1">
-                     <span><BsGrid1X2Fill /> pre-made Ui Elements</span>
-                     <h1>UI Elegance in a Snap</h1>
-                     <p>Make your project look great with ready-made elements for a professional design that's quick and efficient.</p>
-                     <p className="links">
-                        <h5 onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Loaders</h5>
-                        <h5 onClick={() => buttons.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Buttons</h5>
-                        <h5 onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Shadows</h5>
-                        and more.
-                     </p>
+                  <div className="sg-card">
+                     <span><LuLoader /> Loaders</span>
                   </div>
-                  <div className="sg-card c2">
-                     <span><FaPlayCircle /> Play Perfect: Media Players</span>
-                     <h1>Custom Players</h1>
-                     <p>Enhance user experience with our media players, fully customizable for engaging and entertaining content delivery.</p>
-                     <p className="links">
-                        <h5><FaLink />Media players</h5>
-                     </p>
+                  <div className="sg-card">
+                     <span><TbPlayerSkipForward /> Players</span>
                   </div>
-                  <div className="sg-card c3">
-                     <span><CgTemplate /> Portfolio Templates</span>
-                     <h1>Free Portfolio Templates</h1>
-                     <p>Make your online portfolio look great with easy-to-use templates. Whether you're showing off your work or presenting your business</p>
-                     <p className="links">
-                        <h5 onClick={() => templates.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Web Templates</h5>
-                     </p>
+                  <div className="sg-card">
+                     <span><CgTemplate /> Portfolios </span>
                   </div>
-                  <div className="sg-card c4">
-                     <span><MdOutlineInvertColors /> Color Palettes</span>
-                     <h1>Palette Perfection: Inspiring Hues</h1>
-                     <p> Infuse life into projects with our curated color palettes. Discover vibrant energy or soothing harmony to express your creativity</p>
-                     <p className="links">
-                        <h5 onClick={() => colors.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Color Palettes</h5>
-                     </p>
+                  <div className="sg-card">
+                     <span><IoColorFillOutline /> Color Palettes</span>
                   </div>
-
+                  <div className="sg-card">
+                     <span><MdFormatShapes /> Forms</span>
+                  </div>
+                  <div className="sg-card">
+                     <span><BsViewList /> Accordions</span>
+                  </div>
+                  <div className="sg-card">
+                     <span><FaRegRectangleList /> Cards</span>
+                  </div>
+                  <div className="sg-card">
+                     <span><IoMdCheckboxOutline /> Checkboxes</span>
+                  </div>
+                  <div className="sg-card">
+                     <span><PiSquareHalfBottomFill /> Footers</span>
+                  </div>
+                  <div className="sg-card">
+                     <span><BsFillMenuButtonWideFill /> Menus</span>
+                  </div>
+                  <div className="sg-card">
+                     <span><LuCheckCircle2 /> Radio Buttons</span>
+                  </div>
+                  <div className="sg-card">
+                     <span><TbInnerShadowRight /> Shadows</span>
+                  </div>
+                  <div className="sg-card">
+                     <span><LiaTableSolid /> Tables</span>
+                  </div>
+                  <div className="sg-card">
+                     <span><TbRowInsertTop /> Tooltips</span>
+                  </div>
+               
                </div>
             </div>
          </div>

@@ -86,9 +86,8 @@ function Header() {
                                     <Link to="/" className="link">Checkboxes</Link>
                                     <Link to="/" className="link">Footers</Link>
                                     <Link to="/" className="link">Loaders</Link>
-                                    <Link to="/" className="link">Mega-Menus</Link>
+                                    <Link to="/" className="link">Menus</Link>
                                     <Link to="/" className="link">Media Players</Link>
-                                    <Link to="/" className="link">Navigation Bars</Link>
                                     <Link to="/" className="link">Radio Buttons</Link>
                                     <Link to="/" className="link">Shadows</Link>
                                     <Link to="/" className="link">Tables</Link>
