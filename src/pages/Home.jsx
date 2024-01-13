@@ -38,7 +38,7 @@ import nick from "../images/nick.jpeg"
 
 import { ReactComponent as Discord } from "../images/icons8-discord.svg"
 import { ReactComponent as Todoist } from "../images/icons8-todoist.svg"
-import { ReactComponent as Github  }from "../images/icons8-github.svg"
+import { ReactComponent as Github } from "../images/icons8-github.svg"
 import { ReactComponent as Spotify } from "../images/icons8-spotify.svg"
 import { ReactComponent as Youtube } from "../images/icons8-youtube.svg"
 import OpenAi from "../images/icons8-chatgpt.svg"
@@ -63,6 +63,16 @@ const customAnimation = keyframes`
   }
 `;
 
+const customAnimation2 = keyframes`
+  from {
+   transform: scale(0.6);
+  }
+
+  to {
+   transform: scale(1);
+  }
+`;
+
 function Home() {
    const loaders = useRef(null);
    const buttons = useRef(null);
@@ -71,11 +81,11 @@ function Home() {
    const colors = useRef(null);
 
    const YourComponent = () => {
-      useEffect(() => { 
+      useEffect(() => {
          document.getElementById('player').play();
       }, [])
    }
-   
+
 
    return (
       <div className="home-container">
@@ -95,7 +105,7 @@ function Home() {
          </div>
 
          <div className="companies">
-            <h1>professional Look</h1>
+            <h1>pro Look</h1>
             <p>Craft a pro-level web UI with QiK,
                effortlessly bringing together some elements from popular platforms such as:
             </p>
@@ -116,55 +126,83 @@ function Home() {
             <div className="section-header">
                {/* <h1>Provided For you !</h1> */}
                <div className="showroom-grid">
-                  <div className="sg-card">
-                     <span><LuLoader /> Loaders</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><TbPlayerSkipForward /> Players</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><CgTemplate /> Portfolios </span>
-                  </div>
-                  <div className="sg-card">
-                     <span><IoColorFillOutline /> Color Palettes</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><MdFormatShapes /> Forms</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><BsViewList /> Accordions</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><FaRegRectangleList /> Cards</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><IoMdCheckboxOutline /> Checkboxes</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><PiSquareHalfBottomFill /> Footers</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><BsFillMenuButtonWideFill /> Menus</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><LuCheckCircle2 /> Radio Buttons</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><TbInnerShadowRight /> Shadows</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><LiaTableSolid /> Tables</span>
-                  </div>
-                  <div className="sg-card">
-                     <span><TbRowInsertTop /> Tooltips</span>
-                  </div>
-               
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><LuLoader /> Loaders</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><TbPlayerSkipForward /> Players</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><CgTemplate /> Portfolios </span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><IoColorFillOutline /> Color Palettes</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><MdFormatShapes /> Forms</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><BsViewList /> Accordions</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><FaRegRectangleList /> Cards</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><IoMdCheckboxOutline /> Checkboxes</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><PiSquareHalfBottomFill /> Footers</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><BsFillMenuButtonWideFill /> Menus</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><LuCheckCircle2 /> Radio Buttons</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><TbInnerShadowRight /> Shadows</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><LiaTableSolid /> Tables</span>
+                     </div>
+                  </Fade>
+                  <Fade delay={100} direction="i" >
+                     <div className="sg-card">
+                        <span><TbRowInsertTop /> Tooltips</span>
+                     </div>
+                  </Fade>
+
                </div>
             </div>
          </div>
 
          {/* Quote kevin */}
-         <Fade delay={100} triggerOnce>
+         <Fade delay={100} >
             <div className="review">
                <p>“ Proudly one of the best Projects so far, QiK makes it quik. ”</p>
                <div className="by">
@@ -184,7 +222,7 @@ function Home() {
                <p>empower you projects user experience with loading animations for smooth performance!</p>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
-            <Fade triggerOnce duration={700}>
+            <Fade duration={700}>
                <div className="grid-1">
                   <div className="grid-1-element">
                      <svg class="container1" viewBox="0 0 40 40" height="40" width="40">
@@ -232,7 +270,7 @@ function Home() {
          </div>
 
          {/* Quote chris */}
-         <Fade delay={100} triggerOnce>
+         <Fade delay={100} >
             <div className="review">
                <p>“ Qik: Where creativity meets efficiency. Empowering creators to bring ideas to life effortlessly, one pixel at a time. ”</p>
                <div className="by">
@@ -252,7 +290,7 @@ function Home() {
                <p>Boost your project's user experience using animated buttons for a seamless and engaging interface!</p>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
-            <Fade triggerOnce duration={700}>
+            <Fade duration={700}>
                <div className="grid-2">
                   <div className="grid-2-element b1">
                      <button>Hover Me</button>
@@ -342,19 +380,24 @@ function Home() {
                <p>Get Creative with Our Free Portfolio Templates - Make Your Online Presence Shine!</p>
                <Link to="/" className="sh-link">Explore Templates <FaArrowRightLong /></Link>
             </div>
-            <Fade triggerOnce duration={700}>
-               <div className="grid-3">
-                  <div className="grid-3-element">
-                     <span>
+
+
+            <div className="grid-3">
+               <div className="grid-3-element">
+                  <span>
+                     <Reveal keyframes={customAnimation2} duration={700}>
                         <video src={videoPromo} muted autoPlay loop id="player"></video>
-                     </span>
-                  </div>
+                     </Reveal>
+                  </span>
                </div>
-            </Fade>
+            </div>
+
+
+
          </div>
 
          {/* Quote nickson */}
-         <Fade delay={100} triggerOnce>
+         <Fade delay={100} >
             <div className="review">
                <p>“ Ideas come to life with a click. Simple and innovative, created just for you! ”</p>
                <div className="by">
@@ -370,13 +413,13 @@ function Home() {
          <div ref={colors} className="elements-example colors">
             <div className="grid-4-element">
                <div className="g4e-left">
-                  <Fade delay={100} triggerOnce direction="down"><h1><CountUp end={35} duration={5}></CountUp>+</h1></Fade>
-                  <h2><Fade delay={200} triggerOnce direction="up">Handpicked Color Palettes</Fade><span><Fade delay={300} triggerOnce direction="up">for your designs, Transform your projects with vibrant hues and creative combinations</Fade></span></h2>
-                  <Fade delay={100} triggerOnce direction="up"><Link className="explorebtn" to="/">Explore Colors</Link></Fade>
+                  <Fade delay={100} direction="down"><h1><CountUp end={35} duration={5}></CountUp>+</h1></Fade>
+                  <h2><Fade delay={200} direction="up">Handpicked Color Palettes</Fade><span><Fade delay={300} direction="up">for your designs, Transform your projects with vibrant hues and creative combinations</Fade></span></h2>
+                  <Fade delay={100} direction="up"><Link className="explorebtn" to="/">Explore Colors</Link></Fade>
                </div>
                <div className="g4e-right">
 
-                  <Fade triggerOnce>
+                  <Fade direction="right">
                      <p>Monalisa Light Palette</p>
                      <div className="g4e-palette1">
                         <span className="px1"></span>
@@ -387,7 +430,7 @@ function Home() {
                      </div>
                   </Fade>
 
-                  <Fade triggerOnce>
+                  <Fade direction="right">
                      <p>Monalisa Dark Palett</p>
                      <div className="g4e-palette2">
                         <span className="px1"></span>
@@ -402,7 +445,7 @@ function Home() {
             </div>
          </div>
 
-      </div>
+      </div >
    )
 }
 
