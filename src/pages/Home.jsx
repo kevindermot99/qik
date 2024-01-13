@@ -28,8 +28,10 @@ import github from "../images/github.png"
 import spotify from "../images/spotify.png"
 import openAi from "../images/openAi.png"
 import portfolio1 from "../images/portfolio1.png"
+import videoPromo from "../images/videoPromo.mp4"
 import { IoIosWarning } from "react-icons/io";
 import CountUp from 'react-countup';
+import ReactPlayer from 'react-player'
 
 
 
@@ -54,6 +56,12 @@ function Home() {
    const templates = useRef(null);
    const colors = useRef(null);
 
+   const YourComponent = () => {
+      useEffect(() => { 
+         document.getElementById('player').play();
+      }, [])
+   }
+   
 
    return (
       <div className="home-container">
@@ -318,7 +326,7 @@ function Home() {
                <div className="grid-3">
                   <div className="grid-3-element">
                      <span>
-                        <img src={portfolio1} />
+                        <video src={videoPromo} muted autoPlay loop id="player"></video>
                      </span>
                   </div>
                </div>
@@ -342,7 +350,7 @@ function Home() {
          <div ref={colors} className="elements-example colors">
             <div className="grid-4-element">
                <div className="g4e-left">
-                  <Fade delay={100} triggerOnce direction="down"><h1><CountUp end={98} duration={5}></CountUp>+</h1></Fade>
+                  <Fade delay={100} triggerOnce direction="down"><h1><CountUp end={35} duration={5}></CountUp>+</h1></Fade>
                   <h2><Fade delay={200} triggerOnce direction="up">Handpicked Color Palettes</Fade><span><Fade delay={300} triggerOnce direction="up">for your designs, Transform your projects with vibrant hues and creative combinations</Fade></span></h2>
                   <Fade delay={100} triggerOnce direction="up"><Link className="explorebtn" to="/">Explore Colors</Link></Fade>
                </div>
