@@ -29,6 +29,7 @@ import spotify from "../images/spotify.png"
 import openAi from "../images/openAi.png"
 import portfolio1 from "../images/portfolio1.png"
 import { IoIosWarning } from "react-icons/io";
+import CountUp from 'react-countup';
 
 
 
@@ -51,13 +52,7 @@ function Home() {
    const buttons = useRef(null);
    const shadows = useRef(null);
    const templates = useRef(null);
-
-   // const executeScroll = () => usage.current.scrollIntoView()
-
-
-   const [exampleHtml, setexampleHtml] = useState(false);
-   const [exampleCss, setexampleCss] = useState(false);
-
+   const colors = useRef(null);
 
 
    return (
@@ -72,7 +67,7 @@ function Home() {
             </Reveal>
             <Reveal keyframes={customAnimation} triggerOnce duration={900} delay={200}>
                <div className="scroll-down" onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}>
-                  Get Start For Free <FaArrowDownLong />
+                  Take a qik look
                </div>
             </Reveal>
          </div>
@@ -83,7 +78,7 @@ function Home() {
                effortlessly bringing together some elements from popular platforms such as:
             </p>
             <span className="companye-logos">
-               <img src={netflix} alt="Netflix" title="Netflix" />
+               {/* <img src={netflix} alt="Netflix" title="Netflix" /> */}
                <img src={spotify} alt="Spotify" title="Spotify" />
                <img src={discord} alt="Discord" title="Discord" />
                <img src={todoist} alt="Todoist" title="Todoist" />
@@ -121,10 +116,10 @@ function Home() {
                   </div>
                   <div className="sg-card c3">
                      <span><CgTemplate /> Portfolio Templates</span>
-                     <h1>Free Design Templates</h1>
+                     <h1>Free Portfolio Templates</h1>
                      <p>Make your online portfolio look great with easy-to-use templates. Whether you're showing off your work or presenting your business</p>
                      <p className="links">
-                        <h5><FaLink />Web Templates</h5>
+                        <h5 onClick={() => templates.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Web Templates</h5>
                      </p>
                   </div>
                   <div className="sg-card c4">
@@ -132,7 +127,7 @@ function Home() {
                      <h1>Palette Perfection: Inspiring Hues</h1>
                      <p> Infuse life into projects with our curated color palettes. Discover vibrant energy or soothing harmony to express your creativity</p>
                      <p className="links">
-                        <h5><FaLink />Color Palettes</h5>
+                        <h5 onClick={() => colors.current?.scrollIntoView({ behavior: "smooth" })}><FaLink />Color Palettes</h5>
                      </p>
                   </div>
 
@@ -265,21 +260,7 @@ function Home() {
             </Fade>
          </div>
 
-         {/* Quote nickson */}
-         <Fade delay={100} triggerOnce>
-            <div className="review">
-               <p>“ Ideas come to life with a click. Simple and innovative, created just for you! ”</p>
-               <div className="by">
-                  <img src={nick} height="50" width="50" />
-                  <span>
-                     <h1>Hirwa Nickson</h1>
-                     <p>Creator</p>
-                  </span>
-               </div>
-            </div>
-         </Fade>
-
-         <div ref={shadows} className="elements-example shadows">
+         {/* <div ref={shadows} className="elements-example shadows">
 
             <div className="section-header">
                <div className="sh-title"><p><span className="identifier" onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></span>Shadows</p></div>
@@ -323,49 +304,74 @@ function Home() {
                   #10
                </div>
             </div>
-         </div>
-
-         {/* <div className="elements-example help">
-            <div className="section-header">
-               <h1>Help & Suggestions</h1>
-               <p>Reach out to us via email to seek assistance or share your suggestions with us. Email us today</p>
-               <a href="#" className="sh-link">Send Email</a>
-            </div>
-            
          </div> */}
+
 
          <div ref={templates} className="elements-example templates">
             <div className="section-header">
                <div className="sh-title"><p><span className="identifier" onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></span>Templates</p></div>
                <h1>Free Portfolio Templates</h1>
                <p>Get Creative with Our Free Portfolio Templates - Make Your Online Presence Shine!</p>
-               <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
+               <Link to="/" className="sh-link">Explore Templates <FaArrowRightLong /></Link>
             </div>
             <Fade triggerOnce duration={700}>
                <div className="grid-3">
                   <div className="grid-3-element">
-                     <h1>UX/UI Designer Portfolio</h1>
-                     <p>Feature your design projects and highlight your skills in UX and UI design.</p>
-                     <span>
-                        <img src={portfolio1} />
-                     </span>
-                  </div>
-                  <div className="grid-3-element">
-                     <h1>UX/UI Designer Portfolio</h1>
-                     <p>Feature your design projects and highlight your skills in UX and UI design.</p>
-                     <span>
-                        <img src={portfolio1} />
-                     </span>
-                  </div>
-                  <div className="grid-3-element">
-                     <h1>UX/UI Designer Portfolio</h1>
-                     <p>Feature your design projects and highlight your skills in UX and UI design.</p>
                      <span>
                         <img src={portfolio1} />
                      </span>
                   </div>
                </div>
             </Fade>
+         </div>
+
+         {/* Quote nickson */}
+         <Fade delay={100} triggerOnce>
+            <div className="review">
+               <p>“ Ideas come to life with a click. Simple and innovative, created just for you! ”</p>
+               <div className="by">
+                  <img src={nick} height="50" width="50" />
+                  <span>
+                     <h1>Hirwa Nickson</h1>
+                     <p>Creator</p>
+                  </span>
+               </div>
+            </div>
+         </Fade>
+
+         <div ref={colors} className="elements-example colors">
+            <div className="grid-4-element">
+               <div className="g4e-left">
+                  <Fade delay={100} triggerOnce direction="down"><h1><CountUp end={98} duration={5}></CountUp>+</h1></Fade>
+                  <h2><Fade delay={200} triggerOnce direction="up">Handpicked Color Palettes</Fade><span><Fade delay={300} triggerOnce direction="up">for your designs, Transform your projects with vibrant hues and creative combinations</Fade></span></h2>
+                  <Fade delay={100} triggerOnce direction="up"><Link className="explorebtn" to="/">Explore Colors</Link></Fade>
+               </div>
+               <div className="g4e-right">
+
+                  <Fade triggerOnce>
+                     <p>Monalisa Light Palette</p>
+                     <div className="g4e-palette1">
+                        <span className="px1"></span>
+                        <span className="px2"></span>
+                        <span className="px3"></span>
+                        <span className="px4"></span>
+                        <span className="px5"></span>
+                     </div>
+                  </Fade>
+
+                  <Fade triggerOnce>
+                     <p>Monalisa Dark Palett</p>
+                     <div className="g4e-palette2">
+                        <span className="px1"></span>
+                        <span className="px2"></span>
+                        <span className="px3"></span>
+                        <span className="px4"></span>
+                        <span className="px5"></span>
+                     </div>
+                  </Fade>
+
+               </div>
+            </div>
          </div>
 
       </div>

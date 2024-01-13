@@ -1,14 +1,11 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { CgMenuLeft } from "react-icons/cg";
-import { FaInfo } from "react-icons/fa";
-import Headroom from "react-headroom";
 import { IoIosArrowDown } from "react-icons/io";
 import { PiSun } from "react-icons/pi";
 import { RiMoonClearLine } from "react-icons/ri";
-import { FaArrowUp } from "react-icons/fa6";
 import ScrollToTop from "react-scroll-to-top";
+import logo from '../images/logo.png'
 
 
 
@@ -73,6 +70,7 @@ function Header() {
             <header>
                 <div className="header-left">
                     <Link to="/" className="logo">
+                        <img src={logo} />
                         <h1>Qik</h1>
                     </Link>
 
@@ -87,9 +85,8 @@ function Header() {
                                     <Link to="/" className="link">Cards</Link>
                                     <Link to="/" className="link">Checkboxes</Link>
                                     <Link to="/" className="link">Footers</Link>
-                                    <Link to="/" className="link">Forms</Link>
                                     <Link to="/" className="link">Loaders</Link>
-                                    <Link to="/" className="link">Menu</Link>
+                                    <Link to="/" className="link">Mega-Menus</Link>
                                     <Link to="/" className="link">Media Players</Link>
                                     <Link to="/" className="link">Navigation Bars</Link>
                                     <Link to="/" className="link">Radio Buttons</Link>
@@ -99,6 +96,10 @@ function Header() {
                                       
                                 </div>
                             </li>
+
+                            <li>
+                                <p>Forms</p>
+                            </li>
                             
                             <li>
                                 <p>Portfolio Templates</p>
@@ -106,7 +107,7 @@ function Header() {
                             
                             <li>
                                 <p>Colors palettes</p>
-                                {/* <sup>NEW</sup> */}
+                                <sup>NEW</sup>
                             </li>
                         </ul>
                     </div>
