@@ -28,7 +28,7 @@ body {
     --scroll-thumb: #cfcfcf;
     --shadow-color: #7f7d9228;
     --item-bg-color: #e6e6e6;
-    --item-hover-color: #f3f3f3;
+    --item-hover-color: #e6e6e6;
     --menu-color: #fcfcfc;
     --text-editor-color: #3a3a42;
     --copy-button-bg: #4d4d538e;
@@ -169,17 +169,17 @@ header {
     position: relative;
     z-index: 10;
     position: -webkit-sticky;
-    transition: .4s;
-    position: sticky;
-    top: -100%;
+    transition: .2s;
+    /* position: sticky;
+    top: -100%; */
 }
 
 
 header.scrolled-background{
     background-color: var(--header-color);
     border-bottom: 1px solid var(--border-lines);
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
 }
 
 .header-left {
@@ -371,14 +371,22 @@ body.dark .dropdown .link {
 }
 
 .scrollToTop {
-    background-color: var(--header-color);
+    background-color: var(--text-color);
     box-shadow: unset;
+    border-radius: 50%;
+    /* opacity: .5; */
+    height: 30px;
+    width: 30px;
+    padding-top: 1px;
 }
 
 .scrollToTop svg {
-    fill: var(--main-color);
+    fill: #fff;
 }
 
+body.dark .scrollToTop svg {
+    fill: #000;
+}
 
 .right-icons {
     /* background-color: cadetblue; */
@@ -451,7 +459,7 @@ body.dark .dropdown .link {
     color: white;
     position: relative;
     padding: 0 20px;
-    border-radius: 8px;
+    border-radius: 50px;
     height: 38px;
     overflow: hidden;
 }
@@ -554,8 +562,8 @@ body.dark .hero p.times{
     /* position: absolute; */
     /* bottom: 0; */
     position: relative;
-    border-radius: 10px;
-    padding: 0 40px;
+    border-radius: 50px;
+    padding: 0 30px;
     transition: .2s;
     cursor: pointer;
     font-size: 16px;
@@ -661,15 +669,31 @@ body.dark .sh-title {
 }
 
 .companye-logos .cl-svg {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
     fill: var(--text-color);
     transition: .2s;
 }
 
 .companye-logos .cl-svg:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
+}
+
+.companye-logos .cl-svg.spotify:hover{
+    fill: #1db954;
+}
+.companye-logos .cl-svg.todoist:hover{
+    fill: #DD412F;
+}
+.companye-logos .cl-svg.github:hover{
+    fill: #3C71BD;
+}
+.companye-logos .cl-svg.discord:hover{
+    fill: #8955ea;
+}
+.companye-logos .cl-svg.youtube:hover{
+    fill: #F70000;
 }
 
 .elements-example {
@@ -1467,6 +1491,7 @@ body.dark .grid-1-element:hover {
 .review h1 {
     font-size: 16px;
     text-align: left;
+    font-weight: lighter;
     color: var(--text-color);
 }
 
@@ -1851,7 +1876,7 @@ body.dark .only-in-light {
 }
 
 .grid-3-element span video {
-    width: 100%;
+    width: 60%;
     /* aspect-ratio: 16/9; */
     object-fit: cover;
     border-radius: 15px;
@@ -1942,7 +1967,7 @@ body.dark .only-in-light {
     color: #fff;
     position: relative;
     padding: 0 50px;
-    border-radius: 8px;
+    border-radius: 50px;
     height: 45px;
     text-decoration: none;
     border: none;
@@ -2134,6 +2159,26 @@ body.dark .g4e-left .explorebtn {
         display: none;
     }
 
+    .grid-4-element{
+        flex-direction: column;
+    }
+
+    .g4e-left, .g4e-right{
+        width: 100%;
+    }
+
+    .g4e-palette1, .g4e-palette2{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .elements-example.colors{
+        height: fit-content;
+    }
+
+    .g4e-right{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -2184,6 +2229,9 @@ body.dark .g4e-left .explorebtn {
     .sh-title .identifier {
         display: none;
     }
+    .grid-3-element span video {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -2201,9 +2249,7 @@ body.dark .g4e-left .explorebtn {
     }
 
     header {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
+        background-color: var(--body-color);
         z-index: 10;
     }
 
@@ -2226,7 +2272,17 @@ body.dark .g4e-left .explorebtn {
 
     .hero {
         height: unset;
-        padding-bottom: 100px;
+        min-height: 88vh;
+        padding-bottom: 40px;
+        gap: 20px;
+    }
+
+    .hero-bubble{
+        display: none;
+    }
+
+    .hero h1{
+        margin-top: 0;
     }
 
     .showroom {
@@ -2251,6 +2307,9 @@ body.dark .g4e-left .explorebtn {
         height: 30px;
     }
 
+    .elements-example{
+        padding: 20px;
+    }
 
 }
 

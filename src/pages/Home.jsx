@@ -94,12 +94,12 @@ function Home() {
       <div className="home-container">
 
          <div className="hero">
-            <Fade duration={10}><div className="hero-bubble"></div></Fade>
+            <Fade triggerOnce duration={10}><div className="hero-bubble"></div></Fade>
             <Reveal keyframes={customAnimation} triggerOnce duration={500} delay={0} >
-               <h1><CountUp end={101} duration={9}></CountUp>+ Web UI Elements<br /> for developers</h1>
+               <h1><CountUp start={100} end={294} duration={9}></CountUp>+ Web UI Elements<br /> for developers</h1>
             </Reveal>
             <Reveal keyframes={customAnimation} triggerOnce duration={700} delay={100}>
-               <p>It's time to discover professionally designed web UI elements—buttons, loaders, templates, and more—with striking color palettes, all for free.</p>
+               <p>It's time to discover professionally designed web UI elements ~ buttons, loaders, templates, and mor ~ with striking color palettes, all for free.</p>
             </Reveal>
             <Reveal keyframes={customAnimation} triggerOnce duration={900} delay={200}>
                <div className="scroll-down" onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}>
@@ -120,11 +120,11 @@ function Home() {
                effortlessly bringing together some elements from popular platforms such as:
             </p>
             <span className="companye-logos">
-               <a href="https://open.spotify.com/" target="_blank"><Spotify className="cl-svg" /></a>
-               <a href="https://todoist.com/" target="_blank"><Todoist className="cl-svg" /></a>
-               <a href="https://github.com/" target="_blank"><Github className="cl-svg" /></a>
-               <a href="https://discord.com/" target="_blank"><Discord className="cl-svg" /></a>
-               <a href="https://youtube.com/" target="_blank"><Youtube className="cl-svg" /></a>
+               <a href="https://open.spotify.com/" target="_blank"><Spotify className="cl-svg spotify" /></a>
+               <a href="https://todoist.com/" target="_blank"><Todoist className="cl-svg todoist" /></a>
+               <a href="https://github.com/" target="_blank"><Github className="cl-svg github" /></a>
+               <a href="https://discord.com/" target="_blank"><Discord className="cl-svg discord" /></a>
+               <a href="https://youtube.com/" target="_blank"><Youtube className="cl-svg youtube" /></a>
             </span>
          </div>
 

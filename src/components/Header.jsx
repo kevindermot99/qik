@@ -124,7 +124,7 @@ function Header() {
 
                                 <li>
                                     <p>Colors palettes</p>
-                                    <sup>NEW</sup>
+                                    <sup>🔥</sup>
                                 </li>
                             </ul>
                         </div>
