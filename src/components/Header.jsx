@@ -7,6 +7,7 @@ import { RiMoonClearLine } from "react-icons/ri";
 import ScrollToTop from "react-scroll-to-top";
 import logo from '../images/logo.png'
 import Headroom from "react-headroom";
+import { FaFire } from "react-icons/fa6";
 
 
 function Header() {
@@ -123,8 +124,8 @@ function Header() {
                                 </li>
 
                                 <li>
-                                    <p>Colors palettes</p>
-                                    <sup>🔥</sup>
+                                    <p>Colors palettes <FaFire className="hoticon" /></p>
+                                    {/* <sup></sup> */}
                                 </li>
                             </ul>
                         </div>

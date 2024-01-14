@@ -285,6 +285,9 @@ body.dark .mega-menu ul li {
     margin-top: 3px;
     text-transform: uppercase;
 }
+.mega-menu ul li .hoticon{
+    color: var(--main-color);
+}
 
 .dropdown-icon {
     /* margin-top: 2px; */
