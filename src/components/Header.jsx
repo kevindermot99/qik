@@ -101,7 +101,7 @@ function Header() {
                             </li>
                             
                             <li>
-                                <p>Portfolio Templates</p>
+                                <p>Templates</p>
                             </li>
                             
                             <li>

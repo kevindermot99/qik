@@ -623,7 +623,7 @@ body.dark .dropdown .link {
     height: fit-content;
     background-color: var(--body-color);
     padding: 30px;
-    scroll-margin: 30px;
+    scroll-margin: 60px;
     /* overflow: hidden; */
     position: relative;
 }

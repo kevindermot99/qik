@@ -63,12 +63,14 @@ const customAnimation = keyframes`
   }
 `;
 
-const customAnimation2 = keyframes`
+const customAnimation2 = keyframes` 
   from {
+   opacity: 0;
    transform: scale(0.6);
   }
 
   to {
+   opacity: 1;
    transform: scale(1);
   }
 `;
@@ -133,7 +135,7 @@ function Home() {
                   </Fade>
                   <Fade delay={100} direction="i" >
                      <div className="sg-card">
-                        <span><TbPlayerSkipForward /> Players</span>
+                        <span><TbPlayerSkipForward />Media Players</span>
                      </div>
                   </Fade>
                   <Fade delay={100} direction="i" >
@@ -376,8 +378,8 @@ function Home() {
          <div ref={templates} className="elements-example templates">
             <div className="section-header">
                <div className="sh-title"><p><span className="identifier" onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></span>Templates</p></div>
-               <h1>Free Portfolio Templates</h1>
-               <p>Get Creative with Our Free Portfolio Templates - Make Your Online Presence Shine!</p>
+               <h1>Free Templates</h1>
+               <p>Get creative with our free website templates! Make great looking websites without spending money</p>
                <Link to="/" className="sh-link">Explore Templates <FaArrowRightLong /></Link>
             </div>
 
