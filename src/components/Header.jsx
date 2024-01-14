@@ -6,7 +6,7 @@ import { PiSun } from "react-icons/pi";
 import { RiMoonClearLine } from "react-icons/ri";
 import ScrollToTop from "react-scroll-to-top";
 import logo from '../images/logo.png'
-
+import Headroom from "react-headroom";
 
 
 function Header() {
@@ -62,62 +62,80 @@ function Header() {
         };
     }, []);
 
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrolledDistance = window.scrollY;
+            const halfwayPoint = window.innerHeight / 1.5;
+
+            setScrolled(scrolledDistance > halfwayPoint);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
-        
+
 
             {/* <Headroom > */}
-            <header>
-                <div className="header-left">
-                    <Link to="/" className="logo">
-                        <img src={logo} />
-                        <h1>Qik</h1>
-                    </Link>
+                <header className={scrolled ? 'scrolled-background' : ''}>
+                    <div className="header-left">
+                        <Link to="/" className="logo">
+                            <img src={logo} />
+                            <h1>Qik</h1>
+                        </Link>
 
-                    <div className="mega-menu">
-                        <ul>
-                            <li>
-                                <p>Elements</p>
-                                <IoIosArrowDown className="dropdown-icon" />
-                                <div className="dropdown">
-                                    <Link to="/" className="link">Accordions</Link>
-                                    <Link to="/" className="link">Buttons</Link>
-                                    <Link to="/" className="link">Cards</Link>
-                                    <Link to="/" className="link">Checkboxes</Link>
-                                    <Link to="/" className="link">Footers</Link>
-                                    <Link to="/" className="link">Loaders</Link>
-                                    <Link to="/" className="link">Menus</Link>
-                                    <Link to="/" className="link">Media Players</Link>
-                                    <Link to="/" className="link">Radio Buttons</Link>
-                                    <Link to="/" className="link">Shadows</Link>
-                                    <Link to="/" className="link">Tables</Link>
-                                    <Link to="/" className="link">Tooltips</Link>
-                                      
-                                </div>
-                            </li>
+                        <div className="mega-menu">
+                            <ul>
+                                <li>
+                                    <p>Elements</p>
+                                    <IoIosArrowDown className="dropdown-icon" />
+                                    <div className="dropdown">
+                                        <Link to="/" className="link">Accordions</Link>
+                                        <Link to="/" className="link">Buttons</Link>
+                                        <Link to="/" className="link">Cards</Link>
+                                        <Link to="/" className="link">Checkboxes</Link>
+                                        <Link to="/" className="link">Footers</Link>
+                                        <Link to="/" className="link">Loaders</Link>
+                                        <Link to="/" className="link">Menus</Link>
+                                        <Link to="/" className="link">Media Players</Link>
+                                        <Link to="/" className="link">Radio Buttons</Link>
+                                        <Link to="/" className="link">Shadows</Link>
+                                        <Link to="/" className="link">Tables</Link>
+                                        <Link to="/" className="link">Tooltips</Link>
 
-                            <li>
-                                <p>Forms</p>
-                            </li>
-                            
-                            <li>
-                                <p>Templates</p>
-                            </li>
-                            
-                            <li>
-                                <p>Colors palettes</p>
-                                <sup>NEW</sup>
-                            </li>
-                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <p>Forms</p>
+                                </li>
+
+                                <li>
+                                    <p>Templates</p>
+                                </li>
+
+                                <li>
+                                    <p>Colors palettes</p>
+                                    <sup>NEW</sup>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div className="right-icons">
+                        <div className={`ri-btn ${darkmode}`} onClick={ActiveMode}>{theme ? <PiSun /> : <RiMoonClearLine />}</div>
+                        <div className="creators">Creators</div>
                     </div>
 
-                </div>
-                <div className="right-icons">
-                    <div className={`ri-btn ${darkmode}`} onClick={ActiveMode}>{theme ? <PiSun /> : <RiMoonClearLine />}</div>
-                    <div className="creators">Creators</div>
-                </div>
-
-            </header>
+                </header>
             {/* </Headroom> */}
 
             <ScrollToTop smooth width="15" className="scrollToTop" />

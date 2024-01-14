@@ -13,6 +13,7 @@ import { Fade } from "react-awesome-reveal";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
+
 // icons
 import { FaLink } from "react-icons/fa6";
 import { LuLoader } from "react-icons/lu";
@@ -93,17 +94,24 @@ function Home() {
       <div className="home-container">
 
          <div className="hero">
+            <Fade duration={10}><div className="hero-bubble"></div></Fade>
             <Reveal keyframes={customAnimation} triggerOnce duration={500} delay={0} >
-               <h1>Designing Tomorrow, Today.</h1>
+               <h1><CountUp end={101} duration={9}></CountUp>+ Web UI Elements<br /> for developers</h1>
             </Reveal>
             <Reveal keyframes={customAnimation} triggerOnce duration={700} delay={100}>
-               <p>Your Web UI Inspiration, Unleash Creativity Without Limits.</p>
+               <p>It's time to discover professionally designed web UI elements—buttons, loaders, templates, and more—with striking color palettes, all for free.</p>
             </Reveal>
             <Reveal keyframes={customAnimation} triggerOnce duration={900} delay={200}>
                <div className="scroll-down" onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}>
-                  Let's Take a qik look
+                  Take a qik look
                </div>
             </Reveal>
+            <Reveal keyframes={customAnimation} triggerOnce duration={500} delay={0} >
+               <p className="times">
+                  Qik has been visited <CountUp end={173099}></CountUp> times.
+               </p>
+            </Reveal>
+
          </div>
 
          <div className="companies">
@@ -128,72 +136,72 @@ function Home() {
             <div className="section-header">
                {/* <h1>Provided For you !</h1> */}
                <div className="showroom-grid">
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><LuLoader /> Loaders</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><TbPlayerSkipForward />Media Players</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><CgTemplate /> Portfolios </span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><IoColorFillOutline /> Color Palettes</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><MdFormatShapes /> Forms</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><BsViewList /> Accordions</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><FaRegRectangleList /> Cards</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><IoMdCheckboxOutline /> Checkboxes</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><PiSquareHalfBottomFill /> Footers</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><BsFillMenuButtonWideFill /> Menus</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><LuCheckCircle2 /> Radio Buttons</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><TbInnerShadowRight /> Shadows</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><LiaTableSolid /> Tables</span>
                      </div>
                   </Fade>
-                  <Fade delay={100} direction="i" >
+                  <Fade delay={100} >
                      <div className="sg-card">
                         <span><TbRowInsertTop /> Tooltips</span>
                      </div>
