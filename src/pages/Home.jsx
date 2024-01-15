@@ -30,6 +30,7 @@ import { LuCheckCircle2 } from "react-icons/lu";
 import { TbInnerShadowRight } from "react-icons/tb";
 import { LiaTableSolid } from "react-icons/lia";
 import { TbRowInsertTop } from "react-icons/tb";
+import { LuMoveRight } from "react-icons/lu";
 
 
 
@@ -229,7 +230,7 @@ function Home() {
             <div className="section-header">
                <div className="sh-title"><p><span className="identifier" onClick={() => loaders.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></span>Loaders</p></div>
                <h1>Improve Project UX with Loaders</h1>
-               <p>empower you projects user experience with loading animations for smooth performance!</p>
+               <h4>empower you projects user experience with loading animations for smooth performance!</h4>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
             <Fade duration={700}>
@@ -297,7 +298,7 @@ function Home() {
             <div className="section-header">
                <div className="sh-title"><p><span className="identifier" onClick={() => buttons.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></span>Buttons</p></div>
                <h1>Elevate UX with Dynamic Buttons</h1>
-               <p>Boost your project's user experience using animated buttons for a seamless and engaging interface!</p>
+               <h4>Boost your project's user experience using animated buttons for a seamless and engaging interface!</h4>
                <Link to="/" className="sh-link">See more <FaArrowRightLong /></Link>
             </div>
             <Fade duration={700}>
@@ -387,7 +388,7 @@ function Home() {
             <div className="section-header">
                <div className="sh-title"><p><span className="identifier" onClick={() => shadows.current?.scrollIntoView({ behavior: "smooth" })}><FaLink /></span>Templates</p></div>
                <h1>Free Templates</h1>
-               <p>Get creative with our free website templates! Make great looking websites without spending money</p>
+               <h4>Get creative with our free website templates! Make great looking websites without spending money</h4>
                <Link to="/" className="sh-link">Explore Templates <FaArrowRightLong /></Link>
             </div>
 
@@ -452,6 +453,16 @@ function Home() {
                   </Fade>
 
                </div>
+            </div>
+         </div>
+
+         <div className="community">
+            <div className="hero-bubble"></div>
+            <h1>Join our community of 30,000+</h1>
+            <p>Join our community of passionate tech enthusiasts to connect with like-minded individuals and seek advice from experts.</p>
+            <div className="communitybtns">
+               <a href="" className="mailbtn">send Email</a>
+               <a href="" className="gitbtn">Star us on GitHub <LuMoveRight /></a>
             </div>
          </div>
 
