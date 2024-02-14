@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import codeContext from "./contexts/codecontext";
 import Header from "./components/Header";
 import Home from './pages/Home'
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -34,26 +35,33 @@ function App() {
           localStorage.setItem('ChoosenTheme', "light");
         }
       })
-
-
   }, []);
 
+  // Loader
+  const [loading, setLoading] = useState(true);
+  const Spinner = document.getElementById("loader-overlay");
+  if (Spinner) {
+    setTimeout(() => {
+      Spinner.classList.add("loader-overlay-hidden");
+      setLoading(false);
+    }, 1000);
+  }
 
   return (
+    !loading && (
     <>
 
       <Router>
         <div className='container'>
-          <codeContext.Provider value={{codeSettings, setCodeSettings}}>
-            <Header />
-            <Routes>
-              <Route path='/' element={<Home />} />
-            </Routes>
-          </codeContext.Provider>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+          <Footer />
         </div>
       </Router>
-
-    </>
+      </>
+    )
   );
 }
 
