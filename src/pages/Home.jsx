@@ -1,9 +1,8 @@
-
 import { TbCopy } from "react-icons/tb";
-import { FaCode } from "react-icons/fa6";
-import { useState, useEffect, useRef } from "react";
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+// import { FaCode } from "react-icons/fa6";
+import { useRef } from "react";
+// import SyntaxHighlighter from 'react-syntax-highlighter';
+// import { monokaiSublime } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { LuMousePointerClick } from "react-icons/lu";
 import { IoCheckmark } from "react-icons/io5";
 import { FaArrowDownLong } from "react-icons/fa6";
@@ -212,7 +211,7 @@ function Home() {
             </div>
          </div>
 
-         {/* Quote kevin */}
+{/* Quote kevin */}
          <Fade delay={100} >
             <div className="review">
                <p>“ Proudly one of the best Projects so far, QiK makes it quik. ”</p>
